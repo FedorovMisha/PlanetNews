@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B0C0D722721E9D700C423AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0D712721E9D700C423AE /* AppDelegate.swift */; };
+		4B0C0D742721E9D700C423AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0D732721E9D700C423AE /* SceneDelegate.swift */; };
+		4B0C0D762721E9D700C423AE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0D752721E9D700C423AE /* BaseVC.swift */; };
+		4B0C0D7B2721E9D700C423AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0D7A2721E9D700C423AE /* Assets.xcassets */; };
+		4B0C0D7E2721E9D700C423AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0D7C2721E9D700C423AE /* LaunchScreen.storyboard */; };
+		4B0C0D8A2721EC9A00C423AE /* ColorDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0D892721EC9A00C423AE /* ColorDefaults.swift */; };
+		4B0C0D8C2721F71C00C423AE /* FontDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0D8B2721F71C00C423AE /* FontDefaults.swift */; };
+		4B0C0DB72721F8AF00C423AE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DAA2721F8AF00C423AE /* Roboto-Medium.ttf */; };
+		4B0C0DB82721F8AF00C423AE /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DAB2721F8AF00C423AE /* Roboto-Light.ttf */; };
+		4B0C0DB92721F8AF00C423AE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DAC2721F8AF00C423AE /* Roboto-Regular.ttf */; };
+		4B0C0DBA2721F8AF00C423AE /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DAD2721F8AF00C423AE /* Roboto-MediumItalic.ttf */; };
+		4B0C0DBB2721F8AF00C423AE /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DAE2721F8AF00C423AE /* Roboto-ThinItalic.ttf */; };
+		4B0C0DBC2721F8AF00C423AE /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DAF2721F8AF00C423AE /* Roboto-BoldItalic.ttf */; };
+		4B0C0DBD2721F8AF00C423AE /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB02721F8AF00C423AE /* Roboto-LightItalic.ttf */; };
+		4B0C0DBE2721F8AF00C423AE /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB12721F8AF00C423AE /* Roboto-Italic.ttf */; };
+		4B0C0DBF2721F8AF00C423AE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB22721F8AF00C423AE /* LICENSE.txt */; };
+		4B0C0DC02721F8AF00C423AE /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB32721F8AF00C423AE /* Roboto-BlackItalic.ttf */; };
+		4B0C0DC12721F8AF00C423AE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB42721F8AF00C423AE /* Roboto-Bold.ttf */; };
+		4B0C0DC22721F8AF00C423AE /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB52721F8AF00C423AE /* Roboto-Thin.ttf */; };
+		4B0C0DC32721F8AF00C423AE /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DB62721F8AF00C423AE /* Roboto-Black.ttf */; };
+		4B0C0DCE2721FA9200C423AE /* EncodeSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DC52721FA9200C423AE /* EncodeSans-Medium.ttf */; };
+		4B0C0DCF2721FA9200C423AE /* EncodeSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DC62721FA9200C423AE /* EncodeSans-Regular.ttf */; };
+		4B0C0DD02721FA9200C423AE /* EncodeSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DC72721FA9200C423AE /* EncodeSans-Bold.ttf */; };
+		4B0C0DD12721FA9200C423AE /* EncodeSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DC82721FA9200C423AE /* EncodeSans-Thin.ttf */; };
+		4B0C0DD22721FA9200C423AE /* EncodeSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DC92721FA9200C423AE /* EncodeSans-ExtraLight.ttf */; };
+		4B0C0DD32721FA9200C423AE /* EncodeSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCA2721FA9200C423AE /* EncodeSans-Light.ttf */; };
+		4B0C0DD42721FA9200C423AE /* EncodeSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCB2721FA9200C423AE /* EncodeSans-Black.ttf */; };
+		4B0C0DD52721FA9200C423AE /* EncodeSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCC2721FA9200C423AE /* EncodeSans-SemiBold.ttf */; };
+		4B0C0DD62721FA9200C423AE /* EncodeSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */; };
+		4B0C0DD82721FB3F00C423AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DD72721FB3F00C423AE /* LoginVC.swift */; };
+		4B0C0DDD2722097D00C423AE /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DDC2722097D00C423AE /* Test.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B0C0D6E2721E9D700C423AE /* PlanetNewsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetNewsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0C0D712721E9D700C423AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B0C0D732721E9D700C423AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B0C0D752721E9D700C423AE /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		4B0C0D7A2721E9D700C423AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B0C0D7D2721E9D700C423AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B0C0D7F2721E9D700C423AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B0C0D892721EC9A00C423AE /* ColorDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDefaults.swift; sourceTree = "<group>"; };
+		4B0C0D8B2721F71C00C423AE /* FontDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDefaults.swift; sourceTree = "<group>"; };
+		4B0C0DAA2721F8AF00C423AE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		4B0C0DAB2721F8AF00C423AE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4B0C0DAC2721F8AF00C423AE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4B0C0DAD2721F8AF00C423AE /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4B0C0DAE2721F8AF00C423AE /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4B0C0DAF2721F8AF00C423AE /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4B0C0DB02721F8AF00C423AE /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		4B0C0DB12721F8AF00C423AE /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		4B0C0DB22721F8AF00C423AE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		4B0C0DB32721F8AF00C423AE /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4B0C0DB42721F8AF00C423AE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		4B0C0DB52721F8AF00C423AE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		4B0C0DB62721F8AF00C423AE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		4B0C0DC52721FA9200C423AE /* EncodeSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Medium.ttf"; sourceTree = "<group>"; };
+		4B0C0DC62721FA9200C423AE /* EncodeSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Regular.ttf"; sourceTree = "<group>"; };
+		4B0C0DC72721FA9200C423AE /* EncodeSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Bold.ttf"; sourceTree = "<group>"; };
+		4B0C0DC82721FA9200C423AE /* EncodeSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Thin.ttf"; sourceTree = "<group>"; };
+		4B0C0DC92721FA9200C423AE /* EncodeSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4B0C0DCA2721FA9200C423AE /* EncodeSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Light.ttf"; sourceTree = "<group>"; };
+		4B0C0DCB2721FA9200C423AE /* EncodeSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Black.ttf"; sourceTree = "<group>"; };
+		4B0C0DCC2721FA9200C423AE /* EncodeSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4B0C0DD72721FB3F00C423AE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4B0C0DDC2722097D00C423AE /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B0C0D6B2721E9D700C423AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B0C0D652721E9D700C423AE = {
+			isa = PBXGroup;
+			children = (
+				4B0C0D702721E9D700C423AE /* PlanetNewsApplication */,
+				4B0C0D6F2721E9D700C423AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B0C0D6F2721E9D700C423AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0D6E2721E9D700C423AE /* PlanetNewsApplication.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B0C0D702721E9D700C423AE /* PlanetNewsApplication */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0D8D2721F72600C423AE /* Fonts */,
+				4B0C0D882721EC5E00C423AE /* ViewDefaults */,
+				4B0C0D852721EA8A00C423AE /* Controllers */,
+				4B0C0D712721E9D700C423AE /* AppDelegate.swift */,
+				4B0C0D732721E9D700C423AE /* SceneDelegate.swift */,
+				4B0C0D7A2721E9D700C423AE /* Assets.xcassets */,
+				4B0C0D7C2721E9D700C423AE /* LaunchScreen.storyboard */,
+				4B0C0D7F2721E9D700C423AE /* Info.plist */,
+			);
+			path = PlanetNewsApplication;
+			sourceTree = "<group>";
+		};
+		4B0C0D852721EA8A00C423AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0D752721E9D700C423AE /* BaseVC.swift */,
+				4B0C0DD72721FB3F00C423AE /* LoginVC.swift */,
+				4B0C0DDC2722097D00C423AE /* Test.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B0C0D882721EC5E00C423AE /* ViewDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0D892721EC9A00C423AE /* ColorDefaults.swift */,
+				4B0C0D8B2721F71C00C423AE /* FontDefaults.swift */,
+			);
+			path = ViewDefaults;
+			sourceTree = "<group>";
+		};
+		4B0C0D8D2721F72600C423AE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0DC42721FA9200C423AE /* EncodeSans */,
+				4B0C0DA92721F8AF00C423AE /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4B0C0DA92721F8AF00C423AE /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0DAA2721F8AF00C423AE /* Roboto-Medium.ttf */,
+				4B0C0DAB2721F8AF00C423AE /* Roboto-Light.ttf */,
+				4B0C0DAC2721F8AF00C423AE /* Roboto-Regular.ttf */,
+				4B0C0DAD2721F8AF00C423AE /* Roboto-MediumItalic.ttf */,
+				4B0C0DAE2721F8AF00C423AE /* Roboto-ThinItalic.ttf */,
+				4B0C0DAF2721F8AF00C423AE /* Roboto-BoldItalic.ttf */,
+				4B0C0DB02721F8AF00C423AE /* Roboto-LightItalic.ttf */,
+				4B0C0DB12721F8AF00C423AE /* Roboto-Italic.ttf */,
+				4B0C0DB22721F8AF00C423AE /* LICENSE.txt */,
+				4B0C0DB32721F8AF00C423AE /* Roboto-BlackItalic.ttf */,
+				4B0C0DB42721F8AF00C423AE /* Roboto-Bold.ttf */,
+				4B0C0DB52721F8AF00C423AE /* Roboto-Thin.ttf */,
+				4B0C0DB62721F8AF00C423AE /* Roboto-Black.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		4B0C0DC42721FA9200C423AE /* EncodeSans */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C0DC52721FA9200C423AE /* EncodeSans-Medium.ttf */,
+				4B0C0DC62721FA9200C423AE /* EncodeSans-Regular.ttf */,
+				4B0C0DC72721FA9200C423AE /* EncodeSans-Bold.ttf */,
+				4B0C0DC82721FA9200C423AE /* EncodeSans-Thin.ttf */,
+				4B0C0DC92721FA9200C423AE /* EncodeSans-ExtraLight.ttf */,
+				4B0C0DCA2721FA9200C423AE /* EncodeSans-Light.ttf */,
+				4B0C0DCB2721FA9200C423AE /* EncodeSans-Black.ttf */,
+				4B0C0DCC2721FA9200C423AE /* EncodeSans-SemiBold.ttf */,
+				4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */,
+			);
+			path = EncodeSans;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B0C0D6D2721E9D700C423AE /* PlanetNewsApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0C0D822721E9D700C423AE /* Build configuration list for PBXNativeTarget "PlanetNewsApplication" */;
+			buildPhases = (
+				4B0C0D6A2721E9D700C423AE /* Sources */,
+				4B0C0D6B2721E9D700C423AE /* Frameworks */,
+				4B0C0D6C2721E9D700C423AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanetNewsApplication;
+			productName = PlanetNewsApplication;
+			productReference = 4B0C0D6E2721E9D700C423AE /* PlanetNewsApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B0C0D662721E9D700C423AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					4B0C0D6D2721E9D700C423AE = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 4B0C0D692721E9D700C423AE /* Build configuration list for PBXProject "PlanetNewsApplication" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B0C0D652721E9D700C423AE;
+			productRefGroup = 4B0C0D6F2721E9D700C423AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B0C0D6D2721E9D700C423AE /* PlanetNewsApplication */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B0C0D6C2721E9D700C423AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C0DC22721F8AF00C423AE /* Roboto-Thin.ttf in Resources */,
+				4B0C0DBF2721F8AF00C423AE /* LICENSE.txt in Resources */,
+				4B0C0DCE2721FA9200C423AE /* EncodeSans-Medium.ttf in Resources */,
+				4B0C0DC32721F8AF00C423AE /* Roboto-Black.ttf in Resources */,
+				4B0C0DC12721F8AF00C423AE /* Roboto-Bold.ttf in Resources */,
+				4B0C0DD22721FA9200C423AE /* EncodeSans-ExtraLight.ttf in Resources */,
+				4B0C0DD12721FA9200C423AE /* EncodeSans-Thin.ttf in Resources */,
+				4B0C0D7E2721E9D700C423AE /* LaunchScreen.storyboard in Resources */,
+				4B0C0DD02721FA9200C423AE /* EncodeSans-Bold.ttf in Resources */,
+				4B0C0D7B2721E9D700C423AE /* Assets.xcassets in Resources */,
+				4B0C0DCF2721FA9200C423AE /* EncodeSans-Regular.ttf in Resources */,
+				4B0C0DBC2721F8AF00C423AE /* Roboto-BoldItalic.ttf in Resources */,
+				4B0C0DB92721F8AF00C423AE /* Roboto-Regular.ttf in Resources */,
+				4B0C0DBB2721F8AF00C423AE /* Roboto-ThinItalic.ttf in Resources */,
+				4B0C0DBD2721F8AF00C423AE /* Roboto-LightItalic.ttf in Resources */,
+				4B0C0DC02721F8AF00C423AE /* Roboto-BlackItalic.ttf in Resources */,
+				4B0C0DB82721F8AF00C423AE /* Roboto-Light.ttf in Resources */,
+				4B0C0DD62721FA9200C423AE /* EncodeSans-ExtraBold.ttf in Resources */,
+				4B0C0DBE2721F8AF00C423AE /* Roboto-Italic.ttf in Resources */,
+				4B0C0DD52721FA9200C423AE /* EncodeSans-SemiBold.ttf in Resources */,
+				4B0C0DBA2721F8AF00C423AE /* Roboto-MediumItalic.ttf in Resources */,
+				4B0C0DB72721F8AF00C423AE /* Roboto-Medium.ttf in Resources */,
+				4B0C0DD32721FA9200C423AE /* EncodeSans-Light.ttf in Resources */,
+				4B0C0DD42721FA9200C423AE /* EncodeSans-Black.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B0C0D6A2721E9D700C423AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C0D762721E9D700C423AE /* BaseVC.swift in Sources */,
+				4B0C0D8A2721EC9A00C423AE /* ColorDefaults.swift in Sources */,
+				4B0C0DD82721FB3F00C423AE /* LoginVC.swift in Sources */,
+				4B0C0DDD2722097D00C423AE /* Test.swift in Sources */,
+				4B0C0D722721E9D700C423AE /* AppDelegate.swift in Sources */,
+				4B0C0D8C2721F71C00C423AE /* FontDefaults.swift in Sources */,
+				4B0C0D742721E9D700C423AE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B0C0D7C2721E9D700C423AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B0C0D7D2721E9D700C423AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B0C0D802721E9D700C423AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B0C0D812721E9D700C423AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B0C0D832721E9D700C423AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetNewsApplication/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misha.PlanetNewsApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4B0C0D842721E9D700C423AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6PRG52CXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetNewsApplication/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misha.PlanetNewsApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B0C0D692721E9D700C423AE /* Build configuration list for PBXProject "PlanetNewsApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0C0D802721E9D700C423AE /* Debug */,
+				4B0C0D812721E9D700C423AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B0C0D822721E9D700C423AE /* Build configuration list for PBXNativeTarget "PlanetNewsApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0C0D832721E9D700C423AE /* Debug */,
+				4B0C0D842721E9D700C423AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B0C0D662721E9D700C423AE /* Project object */;
+}
