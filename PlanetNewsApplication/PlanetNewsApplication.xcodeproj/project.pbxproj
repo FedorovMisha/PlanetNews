@@ -36,10 +36,11 @@
 		4B0C0DD42721FA9200C423AE /* EncodeSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCB2721FA9200C423AE /* EncodeSans-Black.ttf */; };
 		4B0C0DD52721FA9200C423AE /* EncodeSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCC2721FA9200C423AE /* EncodeSans-SemiBold.ttf */; };
 		4B0C0DD62721FA9200C423AE /* EncodeSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */; };
-		4B0C0DD82721FB3F00C423AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DD72721FB3F00C423AE /* LoginVC.swift */; };
+		4B0C0DD82721FB3F00C423AE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DD72721FB3F00C423AE /* SignUpVC.swift */; };
 		4B0C0DDD2722097D00C423AE /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DDC2722097D00C423AE /* Test.swift */; };
 		4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB232722758D002180E0 /* NumberExtensions.swift */; };
 		4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB2527227AB6002180E0 /* CGRectExtension.swift */; };
+		4B9777E92722C0B90051C53C /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9777E82722C0B90051C53C /* JoinVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +75,11 @@
 		4B0C0DCB2721FA9200C423AE /* EncodeSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-Black.ttf"; sourceTree = "<group>"; };
 		4B0C0DCC2721FA9200C423AE /* EncodeSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		4B0C0DD72721FB3F00C423AE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4B0C0DD72721FB3F00C423AE /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		4B0C0DDC2722097D00C423AE /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4B17CB232722758D002180E0 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		4B17CB2527227AB6002180E0 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
+		4B9777E82722C0B90051C53C /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				4B0C0D752721E9D700C423AE /* BaseVC.swift */,
-				4B0C0DD72721FB3F00C423AE /* LoginVC.swift */,
+				4B0C0DD72721FB3F00C423AE /* SignUpVC.swift */,
 				4B0C0DDC2722097D00C423AE /* Test.swift */,
+				4B9777E82722C0B90051C53C /* JoinVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,8 +301,9 @@
 			files = (
 				4B0C0D762721E9D700C423AE /* BaseVC.swift in Sources */,
 				4B0C0D8A2721EC9A00C423AE /* ColorDefaults.swift in Sources */,
-				4B0C0DD82721FB3F00C423AE /* LoginVC.swift in Sources */,
+				4B0C0DD82721FB3F00C423AE /* SignUpVC.swift in Sources */,
 				4B0C0DDD2722097D00C423AE /* Test.swift in Sources */,
+				4B9777E92722C0B90051C53C /* JoinVC.swift in Sources */,
 				4B0C0D722721E9D700C423AE /* AppDelegate.swift in Sources */,
 				4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */,
 				4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */,
@@ -373,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -428,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

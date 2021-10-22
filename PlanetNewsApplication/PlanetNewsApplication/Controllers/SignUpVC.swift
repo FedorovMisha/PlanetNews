@@ -7,12 +7,12 @@
 
 import UIKit
 
-class LoginVC: BaseVC {
-
+class SignUpVC: BaseVC {
+    
     lazy var signUpLabel:UILabel = {
         let label = UILabel()
         label.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 36.53, yOffSet: 4.52, w: 30, h: 7.2)
-    
+        
         label.font = UIFont(name: FontNameDefaults.encodeSansBold, size: self.view.bounds.getPersentByRectHeight(persent: 3.44))
         label.textColor = .white
         label.text = "Sign Up"
@@ -41,7 +41,7 @@ class LoginVC: BaseVC {
     }()
     
     lazy var submitButton : UIButton = {
-        let btn = UIButton()
+        let btn = UIButton(type:.system)
         btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 7.2, yOffSet: 65.55, w: 85.6, h: 10.03)
         btn.setTitle("SignUp", for: .normal)
         btn.setTitleColor( UIColor.black, for: .normal)
@@ -53,13 +53,14 @@ class LoginVC: BaseVC {
     }()
     
     lazy var backButton : UIButton = {
-        let btn = UIButton()
+        let btn = UIButton(type: .system)
         btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 44.8, yOffSet: 78.26, w: 10.67, h: 3.52)
         btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
         btn.setTitle("back", for: .normal)
         btn.backgroundColor = .clear
         btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
         btn.setTitleColor(FontColors.baseGrayColor, for: .normal)
+        btn.addTarget(self, action: #selector(self.onClickBack), for: .touchUpInside)
         return btn
     }()
     
@@ -76,13 +77,15 @@ class LoginVC: BaseVC {
         self.contentBox.addSubview(backButton)
     }
     
-    
     @objc func onSignUpClick(){
         //TODO
-        self.dismiss(animated: true){
-            let vc = Test(nibName: nil, bundle: nil)
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: false)
-        }
+        
+        let testVC = Test()
+        testVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(testVC, animated: true)
+    }
+    
+    @objc func onClickBack(){
+        self.navigationController?.popViewController(animated: true)
     }
 }

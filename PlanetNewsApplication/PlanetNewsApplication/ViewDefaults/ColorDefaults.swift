@@ -20,5 +20,7 @@ struct ShadowColors{
 
 struct FontColors{
     static let baseGrayColor = UIColor(red: 0.475, green: 0.475, blue: 0.478, alpha: 1)
+    static let baseClickedGrayColor = UIColor(red: 0.575, green: 0.575, blue: 0.578, alpha: 1)
+    
     static let baseWhite = UIColor.white
 }
