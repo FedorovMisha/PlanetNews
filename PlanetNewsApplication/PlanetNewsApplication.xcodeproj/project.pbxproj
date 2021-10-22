@@ -38,6 +38,8 @@
 		4B0C0DD62721FA9200C423AE /* EncodeSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */; };
 		4B0C0DD82721FB3F00C423AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DD72721FB3F00C423AE /* LoginVC.swift */; };
 		4B0C0DDD2722097D00C423AE /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DDC2722097D00C423AE /* Test.swift */; };
+		4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB232722758D002180E0 /* NumberExtensions.swift */; };
+		4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB2527227AB6002180E0 /* CGRectExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EncodeSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		4B0C0DD72721FB3F00C423AE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4B0C0DDC2722097D00C423AE /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		4B17CB232722758D002180E0 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
+		4B17CB2527227AB6002180E0 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		4B0C0D652721E9D700C423AE = {
 			isa = PBXGroup;
 			children = (
+				4B17CB2127227560002180E0 /* Core */,
 				4B0C0D702721E9D700C423AE /* PlanetNewsApplication */,
 				4B0C0D6F2721E9D700C423AE /* Products */,
 			);
@@ -180,6 +185,23 @@
 				4B0C0DCD2721FA9200C423AE /* EncodeSans-ExtraBold.ttf */,
 			);
 			path = EncodeSans;
+			sourceTree = "<group>";
+		};
+		4B17CB2127227560002180E0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4B17CB2227227577002180E0 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4B17CB2227227577002180E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B17CB232722758D002180E0 /* NumberExtensions.swift */,
+				4B17CB2527227AB6002180E0 /* CGRectExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +301,8 @@
 				4B0C0DD82721FB3F00C423AE /* LoginVC.swift in Sources */,
 				4B0C0DDD2722097D00C423AE /* Test.swift in Sources */,
 				4B0C0D722721E9D700C423AE /* AppDelegate.swift in Sources */,
+				4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */,
+				4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */,
 				4B0C0D8C2721F71C00C423AE /* FontDefaults.swift in Sources */,
 				4B0C0D742721E9D700C423AE /* SceneDelegate.swift in Sources */,
 			);

@@ -11,47 +11,50 @@ class LoginVC: BaseVC {
 
     lazy var signUpLabel:UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: self.contentBox.bounds.width*0.5 - 125, y: 27, width: 250, height: 43)
-        label.font = UIFont(name: FontNameDefaults.encodeSansBold, size: 28)
+        label.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 36.53, yOffSet: 4.52, w: 30, h: 7.2)
+    
+        label.font = UIFont(name: FontNameDefaults.encodeSansBold, size: self.view.bounds.getPersentByRectHeight(persent: 3.44))
         label.textColor = .white
         label.text = "Sign Up"
-        label.textAlignment = .center
+        label.textAlignment = .left
         return label
     }()
     
     lazy var nameInput:UITextField = {
-        let frame = CGRect(x: self.view.bounds.width*0.5 - 130, y: 107, width: 260, height: 30)
+        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 17.89, w: 69.33, h: 5.02)
         return createTextInput(placeHolder: "Name", secure: false, frame: frame)
     }()
     
     lazy var emailInput: UITextField = {
-        let frame = CGRect(x: self.view.bounds.width*0.5 - 130, y: 170, width: 260, height: 30)
+        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 28.43, w: 69.33, h: 5.02)
         return createTextInput(placeHolder: "Email", secure: false, frame: frame)
     }()
     
     lazy var passwordInput: UITextField = {
-        let frame = CGRect(x: self.view.bounds.width*0.5 - 130, y: 234, width: 260, height: 30)
+        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 39.13, w: 69.33, h: 5.02)
         return createTextInput(placeHolder: "Password", secure: true, frame: frame)
     }()
     
     lazy var confirmPasswordInput: UITextField = {
-        let frame = CGRect(x: self.view.bounds.width*0.5 - 130, y: 298, width: 260, height: 30)
+        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 49.83, w: 69.33, h: 5.02)
         return createTextInput(placeHolder: "Confirm Password", secure: true, frame: frame)
     }()
     
     lazy var submitButton : UIButton = {
-        let btn = UIButton(frame: CGRect(x: self.view.bounds.width * 0.5 - 160, y: 392, width: 320, height: 60))
+        let btn = UIButton()
+        btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 7.2, yOffSet: 65.55, w: 85.6, h: 10.03)
         btn.setTitle("SignUp", for: .normal)
         btn.setTitleColor( UIColor.black, for: .normal)
         btn.backgroundColor = .white
-        btn.layer.cornerRadius = 25
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
+        btn.layer.cornerRadius = self.view.bounds.getPersentByRectHeight(persent: 3.68)
+        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: self.view.bounds.getPersentByRectHeight(persent: 2.21))
         btn.addTarget(self, action: #selector(onSignUpClick), for: UIControl.Event.touchUpInside)
         return btn
     }()
     
     lazy var backButton : UIButton = {
-        let btn = UIButton(frame: CGRect(x: self.view.bounds.width * 0.5 - 20, y: 468, width: 40, height: 21))
+        let btn = UIButton()
+        btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 44.8, yOffSet: 78.26, w: 10.67, h: 3.52)
         btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
         btn.setTitle("back", for: .normal)
         btn.backgroundColor = .clear
@@ -73,21 +76,6 @@ class LoginVC: BaseVC {
         self.contentBox.addSubview(backButton)
     }
     
-    func createTextInput(placeHolder:String, secure:Bool, frame:CGRect) -> UITextField{
-        let field = UITextField()
-        field.frame = frame
-        field.backgroundColor = .clear
-        field.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.foregroundColor: UIColor.white])
-        
-        field.textColor = .white
-        field.isSecureTextEntry = secure
-        field.font = UIFont(name: FontNameDefaults.robotoRegular, size: 18)
-        let border = CALayer()
-        border.frame = CGRect(x: 0, y: field.frame.height + 2, width: field.frame.width, height: 2)
-        border.backgroundColor = BackgroundColors.baseInputBorderGray.cgColor
-        field.layer.addSublayer(border)
-        return field
-    }
     
     @objc func onSignUpClick(){
         //TODO
@@ -96,6 +84,5 @@ class LoginVC: BaseVC {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: false)
         }
-
     }
 }
