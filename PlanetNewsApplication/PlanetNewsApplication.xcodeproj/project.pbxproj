@@ -41,6 +41,7 @@
 		4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB232722758D002180E0 /* NumberExtensions.swift */; };
 		4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB2527227AB6002180E0 /* CGRectExtension.swift */; };
 		4B9777E92722C0B90051C53C /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9777E82722C0B90051C53C /* JoinVC.swift */; };
+		4BC5463A2722E32B00F96E0C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC546392722E32B00F96E0C /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		4B17CB232722758D002180E0 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		4B17CB2527227AB6002180E0 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		4B9777E82722C0B90051C53C /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
+		4BC546392722E32B00F96E0C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				4B0C0DD72721FB3F00C423AE /* SignUpVC.swift */,
 				4B0C0DDC2722097D00C423AE /* Test.swift */,
 				4B9777E82722C0B90051C53C /* JoinVC.swift */,
+				4BC546392722E32B00F96E0C /* LoginVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC5463A2722E32B00F96E0C /* LoginVC.swift in Sources */,
 				4B0C0D762721E9D700C423AE /* BaseVC.swift in Sources */,
 				4B0C0D8A2721EC9A00C423AE /* ColorDefaults.swift in Sources */,
 				4B0C0DD82721FB3F00C423AE /* SignUpVC.swift in Sources */,

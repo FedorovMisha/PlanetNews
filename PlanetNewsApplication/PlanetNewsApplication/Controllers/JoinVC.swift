@@ -45,6 +45,7 @@ class JoinVC: BaseVC {
         button.backgroundColor = .white
         button.setTitle("Login", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
+        button.addTarget(self, action: #selector(self.onLoginClick), for: .touchUpInside)
         return button
     }()
     
@@ -99,8 +100,14 @@ class JoinVC: BaseVC {
     
     
     @objc func onSignUpClick(){
-        let loginVc = SignUpVC()
-        loginVc.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(loginVc, animated: true)
+        let signUp = SignUpVC()
+        signUp.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(signUp, animated: true)
+    }
+    
+    @objc func onLoginClick(){
+        let loginVC = LoginVC()
+        loginVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
 }

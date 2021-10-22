@@ -48,7 +48,7 @@ class SignUpVC: BaseVC {
         btn.backgroundColor = .white
         btn.layer.cornerRadius = self.view.bounds.getPersentByRectHeight(persent: 3.68)
         btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: self.view.bounds.getPersentByRectHeight(persent: 2.21))
-        btn.addTarget(self, action: #selector(onSignUpClick), for: UIControl.Event.touchUpInside)
+        btn.addTarget(self, action: #selector(didTouchSignUp), for: UIControl.Event.touchUpInside)
         return btn
     }()
     
@@ -60,7 +60,7 @@ class SignUpVC: BaseVC {
         btn.backgroundColor = .clear
         btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
         btn.setTitleColor(FontColors.baseGrayColor, for: .normal)
-        btn.addTarget(self, action: #selector(self.onClickBack), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(self.didTouchBack), for: .touchUpInside)
         return btn
     }()
     
@@ -77,7 +77,7 @@ class SignUpVC: BaseVC {
         self.contentBox.addSubview(backButton)
     }
     
-    @objc func onSignUpClick(){
+    @objc func didTouchSignUp(){
         //TODO
         
         let testVC = Test()
@@ -85,7 +85,7 @@ class SignUpVC: BaseVC {
         self.navigationController?.pushViewController(testVC, animated: true)
     }
     
-    @objc func onClickBack(){
+    @objc func didTouchBack(){
         self.navigationController?.popViewController(animated: true)
     }
 }
