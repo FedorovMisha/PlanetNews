@@ -9,6 +9,10 @@ import UIKit
 
 class BaseVC : UIViewController {
 
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     lazy var contentBox : UIView = {
         let yOffSet = self.view.bounds.height * 27.toPersent()
         let view = UIView()
