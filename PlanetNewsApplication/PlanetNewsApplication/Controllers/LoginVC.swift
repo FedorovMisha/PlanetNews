@@ -72,13 +72,43 @@ class LoginVC: BaseVC {
         self.contentBox.addSubview(submitButton)
         self.contentBox.addSubview(backButton)
     }
+    
+}
 
+
+extension LoginVC {
+    
+    var credentials: SignInCredentials {
+        return SignInCredentials(email: emailInput.text ?? "", password: passwordInput.text ?? "")
+    }
+    
+    var authorizationService: Authorization {
+        let userManager = UserManagerService()
+        return AuthorizationService(userManger: userManager, authenticationService: AuthenticationService(userManager: userManager))
+    }
+    
     @objc func didTouchLogin(){
-        print("login")
+        guard let email = emailInput.text, let password = passwordInput.text, EmailValidator(email: email).validate().success, PasswordValidator(password: password).validate().success else {
+            let vc = UIAlertController(title: "Sign In Error", message: "Incorrect data", preferredStyle: .alert)
+            vc.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(vc, animated: true, completion: nil)
+            return
+        }
+        
+        if authorizationService.signIn(SignInCredentials(email: email, password: password)){
+            let vc = Test()
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let alertVC = UIAlertController(title: "Sign In", message: "Sign in error! \n the user may not exist or the data was entered incorrectly", preferredStyle: .alert)
+            
+            alertVC.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alertVC, animated: true, completion: nil)
+        }
+        
     }
     
     @objc func didTouchBack(){
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
 }

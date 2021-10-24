@@ -40,6 +40,16 @@
 		4B0C0DDD2722097D00C423AE /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C0DDC2722097D00C423AE /* Test.swift */; };
 		4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB232722758D002180E0 /* NumberExtensions.swift */; };
 		4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B17CB2527227AB6002180E0 /* CGRectExtension.swift */; };
+		4B24636027257EE100D28B86 /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24635F27257EE100D28B86 /* AccountManagement.swift */; };
+		4B539DA727254120004BE472 /* ValidationAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DA627254120004BE472 /* ValidationAbstraction.swift */; };
+		4B539DAA2725435E004BE472 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DA92725435E004BE472 /* PasswordValidator.swift */; };
+		4B539DAC272544FF004BE472 /* ValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DAB272544FF004BE472 /* ValidationExtension.swift */; };
+		4B539DAE2725456B004BE472 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DAD2725456B004BE472 /* NameValidator.swift */; };
+		4B539DB027254773004BE472 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DAF27254773004BE472 /* EmailValidator.swift */; };
+		4B539DB2272560F1004BE472 /* UserManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DB1272560F1004BE472 /* UserManagement.swift */; };
+		4B539DB527256113004BE472 /* UserEntitites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DB427256113004BE472 /* UserEntitites.swift */; };
+		4B539DB727257821004BE472 /* UserManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B539DB627257821004BE472 /* UserManger.swift */; };
+		4B7E890A2725AF2900A3311C /* UserSignUpCredentialsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E89092725AF2900A3311C /* UserSignUpCredentialsValidator.swift */; };
 		4B9777E92722C0B90051C53C /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9777E82722C0B90051C53C /* JoinVC.swift */; };
 		4BC5463A2722E32B00F96E0C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC546392722E32B00F96E0C /* LoginVC.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +90,16 @@
 		4B0C0DDC2722097D00C423AE /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4B17CB232722758D002180E0 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		4B17CB2527227AB6002180E0 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
+		4B24635F27257EE100D28B86 /* AccountManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagement.swift; sourceTree = "<group>"; };
+		4B539DA627254120004BE472 /* ValidationAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationAbstraction.swift; sourceTree = "<group>"; };
+		4B539DA92725435E004BE472 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		4B539DAB272544FF004BE472 /* ValidationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtension.swift; sourceTree = "<group>"; };
+		4B539DAD2725456B004BE472 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
+		4B539DAF27254773004BE472 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		4B539DB1272560F1004BE472 /* UserManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagement.swift; sourceTree = "<group>"; };
+		4B539DB427256113004BE472 /* UserEntitites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntitites.swift; sourceTree = "<group>"; };
+		4B539DB627257821004BE472 /* UserManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManger.swift; sourceTree = "<group>"; };
+		4B7E89092725AF2900A3311C /* UserSignUpCredentialsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpCredentialsValidator.swift; sourceTree = "<group>"; };
 		4B9777E82722C0B90051C53C /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 		4BC546392722E32B00F96E0C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +216,9 @@
 		4B17CB2127227560002180E0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4B539DB327256106004BE472 /* Entitites */,
+				4B539DA82725433C004BE472 /* Implementation */,
+				4B539DA52725410B004BE472 /* Abstraction */,
 				4B17CB2227227577002180E0 /* Extensions */,
 			);
 			path = Core;
@@ -206,8 +229,39 @@
 			children = (
 				4B17CB232722758D002180E0 /* NumberExtensions.swift */,
 				4B17CB2527227AB6002180E0 /* CGRectExtension.swift */,
+				4B539DAB272544FF004BE472 /* ValidationExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B539DA52725410B004BE472 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				4B539DA627254120004BE472 /* ValidationAbstraction.swift */,
+				4B539DB1272560F1004BE472 /* UserManagement.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		4B539DA82725433C004BE472 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				4B539DA92725435E004BE472 /* PasswordValidator.swift */,
+				4B539DAD2725456B004BE472 /* NameValidator.swift */,
+				4B539DAF27254773004BE472 /* EmailValidator.swift */,
+				4B539DB627257821004BE472 /* UserManger.swift */,
+				4B24635F27257EE100D28B86 /* AccountManagement.swift */,
+				4B7E89092725AF2900A3311C /* UserSignUpCredentialsValidator.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		4B539DB327256106004BE472 /* Entitites */ = {
+			isa = PBXGroup;
+			children = (
+				4B539DB427256113004BE472 /* UserEntitites.swift */,
+			);
+			path = Entitites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,15 +358,25 @@
 			files = (
 				4BC5463A2722E32B00F96E0C /* LoginVC.swift in Sources */,
 				4B0C0D762721E9D700C423AE /* BaseVC.swift in Sources */,
+				4B539DAC272544FF004BE472 /* ValidationExtension.swift in Sources */,
+				4B539DB727257821004BE472 /* UserManger.swift in Sources */,
+				4B24636027257EE100D28B86 /* AccountManagement.swift in Sources */,
+				4B539DAE2725456B004BE472 /* NameValidator.swift in Sources */,
 				4B0C0D8A2721EC9A00C423AE /* ColorDefaults.swift in Sources */,
+				4B7E890A2725AF2900A3311C /* UserSignUpCredentialsValidator.swift in Sources */,
 				4B0C0DD82721FB3F00C423AE /* SignUpVC.swift in Sources */,
+				4B539DB527256113004BE472 /* UserEntitites.swift in Sources */,
 				4B0C0DDD2722097D00C423AE /* Test.swift in Sources */,
 				4B9777E92722C0B90051C53C /* JoinVC.swift in Sources */,
 				4B0C0D722721E9D700C423AE /* AppDelegate.swift in Sources */,
+				4B539DA727254120004BE472 /* ValidationAbstraction.swift in Sources */,
 				4B17CB242722758D002180E0 /* NumberExtensions.swift in Sources */,
 				4B17CB2627227AB6002180E0 /* CGRectExtension.swift in Sources */,
+				4B539DAA2725435E004BE472 /* PasswordValidator.swift in Sources */,
+				4B539DB027254773004BE472 /* EmailValidator.swift in Sources */,
 				4B0C0D8C2721F71C00C423AE /* FontDefaults.swift in Sources */,
 				4B0C0D742721E9D700C423AE /* SceneDelegate.swift in Sources */,
+				4B539DB2272560F1004BE472 /* UserManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow()
-        let navVC = UINavigationController(rootViewController: JoinVC())
+        let navVC = UINavigationController(rootViewController: UserManagerService().currentUser == nil ? JoinVC() : Test())
         navVC.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navVC
         window?.windowScene = windowScene

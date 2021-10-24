@@ -1,0 +1,23 @@
+//
+//  ValidationAbstraction.swift
+//  PlanetNewsApplication
+//
+//  Created by Misha Fedorov on 24.10.2021.
+//
+
+import Foundation
+
+enum ValidationErrorTypes{
+    case email
+    case password
+    case name
+    case confirmPassword
+    case formLevel
+}
+
+
+typealias ValidationResult = (success: Bool, errors: [ValidationErrorTypes: String])
+
+protocol Validator{
+    func validate() -> ValidationResult
+}
