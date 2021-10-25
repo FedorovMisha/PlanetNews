@@ -14,13 +14,13 @@ protocol UserManager{
     func getUser(credentials: SignInCredentials) -> ApplicationUser?
 }
 
-protocol Authentication {
-    func authenticate(credentials: SignInCredentials) -> ApplicationUser?
-}
+//protocol Authentication {
+//    func authenticate(credentials: SignInCredentials) -> ApplicationUser?
+//}
 
 protocol Authorization {
     func autoLogin() -> Bool
     func signIn(_ credentials: SignInCredentials) -> Bool
     func signUp(_ credentials: SignUpCredentials) -> Bool
-    func logOut() -> Bool
+    func logOut()
 }

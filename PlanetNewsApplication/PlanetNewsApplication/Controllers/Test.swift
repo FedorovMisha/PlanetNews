@@ -27,7 +27,7 @@ class Test: BaseVC {
     @objc func logOut(){
         let userManager = UserManagerService()
         
-        let authService = AuthorizationService(userManger: userManager, authenticationService: AuthenticationService(userManager: userManager))
+        let authService = AuthorizationService(userManger: userManager)
         authService.logOut()
         let jVc = JoinVC()
         jVc.modalPresentationStyle = .fullScreen

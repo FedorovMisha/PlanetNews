@@ -50,12 +50,13 @@ class LoginVC: BaseVC {
     }()
     
     lazy var backButton : UIButton = {
+        let fontSize = self.view.bounds.getPersentByRectHeight(persent: 2.2)
         let btn = UIButton(type: .system)
         btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 44.8, yOffSet: 69.57, w: 10.67, h: 3.52)
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
+        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: fontSize)
         btn.setTitle("back", for: .normal)
         btn.backgroundColor = .clear
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
+        
         btn.setTitleColor(FontColors.baseGrayColor, for: .normal)
         btn.addTarget(self, action: #selector(self.didTouchBack), for: .touchUpInside)
         return btn
@@ -84,7 +85,7 @@ extension LoginVC {
     
     var authorizationService: Authorization {
         let userManager = UserManagerService()
-        return AuthorizationService(userManger: userManager, authenticationService: AuthenticationService(userManager: userManager))
+        return AuthorizationService(userManger: userManager)
     }
     
     @objc func didTouchLogin(){

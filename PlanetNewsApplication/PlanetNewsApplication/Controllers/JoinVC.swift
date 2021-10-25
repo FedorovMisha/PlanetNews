@@ -13,6 +13,7 @@ class JoinVC: BaseVC {
         let icon = UIImage(named: "planet_logo")
         let imageView = UIImageView(image: icon)
         imageView.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 22.67, yOffSet: 1.51, w: 54.67, h: 34.28)
+//        imageView.frame.size = CGSize(width: self.contentBox.bounds.getPersentByRectHeight(persent: 34.28), height: self.contentBox.bounds.getPersentByRectHeight(persent: 34.28))
         return imageView
     }()
     
@@ -40,19 +41,23 @@ class JoinVC: BaseVC {
     }()
     
     lazy var loginButton: UIButton = {
+        let fontSize = self.view.bounds.getPersentByRectHeight(persent: 2.2)
         let button = UIButton(type: .system)
         button.layer.cornerRadius = self.contentBox.bounds.getPersentByRectHeight(persent: 4.18)
         button.backgroundColor = .white
         button.setTitle("Login", for: .normal)
+        button.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: fontSize)
         button.setTitleColor(UIColor.black, for: .normal)
         button.addTarget(self, action: #selector(self.onLoginClick), for: .touchUpInside)
         return button
     }()
     
     lazy var signUpButton: UIButton = {
+        let fontSize = self.view.bounds.getPersentByRectHeight(persent: 2.2)
         let button = UIButton(type: .system)
         button.layer.cornerRadius = self.contentBox.bounds.getPersentByRectHeight(persent: 4.18)
         button.backgroundColor = .white
+        button.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: fontSize)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.addTarget(self, action: #selector(self.onSignUpClick), for: .touchUpInside)

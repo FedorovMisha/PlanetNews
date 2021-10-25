@@ -10,7 +10,7 @@ import UIKit
 class SignUpVC: BaseVC {
     let userManager = UserManagerService()
     lazy var authorizationManager: Authorization = {
-        AuthorizationService(userManger: self.userManager, authenticationService: AuthenticationService(userManager: self.userManager))
+        AuthorizationService(userManger: self.userManager)
     }()
     
     lazy var signUpLabel:UILabel = {
@@ -71,12 +71,12 @@ class SignUpVC: BaseVC {
     }()
     
     lazy var backButton : UIButton = {
+        let fontSize = self.view.bounds.getPersentByRectHeight(persent: 2.2)
         let btn = UIButton(type: .system)
         btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 44.8, yOffSet: 78.26, w: 10.67, h: 3.52)
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
+        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: fontSize)
         btn.setTitle("back", for: .normal)
         btn.backgroundColor = .clear
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: 18)
         btn.setTitleColor(FontColors.baseGrayColor, for: .normal)
         btn.addTarget(self, action: #selector(self.didTouchBack), for: .touchUpInside)
         return btn

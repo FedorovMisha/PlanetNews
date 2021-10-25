@@ -37,7 +37,8 @@ class BaseVC : UIViewController {
         let label = UILabel()
         label.frame = self.view.bounds.getSlicedRect(xOffSet: 7.2, yOffSet: 7.6, w: 42.7, h: 2.6)
         label.textColor = FontColors.baseGrayColor
-        label.font = UIFont(name: FontNameDefaults.robotoRegular, size: 18)
+        
+        label.font = UIFont(name: FontNameDefaults.robotoRegular, size: fontSize)
         return label
     }()
     
@@ -45,6 +46,8 @@ class BaseVC : UIViewController {
         let image = UIImage(named: "planet_logo")
         let view = UIImageView(image: image)
         view.frame = self.view.bounds.getSlicedRect(xOffSet: 82.93, yOffSet: 6.3, w: 8.53, h: 3.93)
+        let size = self.view.bounds.getPersentByRectHeight(persent: 3.93)
+        view.frame.size = CGSize(width: size, height: size)
         return view
     }()
     

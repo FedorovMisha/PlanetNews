@@ -8,29 +8,29 @@
 import Foundation
 
 
-class AuthenticationService : Authentication{
-    
-    private let userManager: UserManager
-    
-    init(userManager: UserManager){
-        self.userManager = userManager
-    }
-    
-    func authenticate(credentials: SignInCredentials) -> ApplicationUser? {
-        return userManager.getUser(credentials: credentials)
-    }
-}
+//class AuthenticationService : Authentication{
+//
+//    private let userManager: UserManager
+//
+//    init(userManager: UserManager){
+//        self.userManager = userManager
+//    }
+//
+//    func authenticate(credentials: SignInCredentials) -> ApplicationUser? {
+//        return userManager.getUser(credentials: credentials)
+//    }
+//}
 
 
 class AuthorizationService : Authorization {
     
     private var userManager: UserManager
     
-    private var authenticationService: Authentication
+//    private var authenticationService: Authentication
     
-    init(userManger: UserManager, authenticationService: Authentication){
+    init(userManger: UserManager/*authenticationService: Authentication */){
         self.userManager = userManger
-        self.authenticationService = authenticationService
+//        self.authenticationService = authenticationService
     }
     
     func autoLogin() -> Bool {
@@ -56,7 +56,7 @@ class AuthorizationService : Authorization {
             return false
         }
         
-        guard (authenticationService.authenticate(credentials: SignInCredentials(email: credentials.email, password: credentials.password))) == nil else {
+        guard (userManager.getUser(credentials: SignInCredentials(email: credentials.email, password: credentials.password))) == nil else {
             return false
         }
         
@@ -67,9 +67,8 @@ class AuthorizationService : Authorization {
         return true
     }
     
-    func logOut() -> Bool {
+    func logOut() {
         userManager.currentUser = nil
-        return true
     }
     
     
