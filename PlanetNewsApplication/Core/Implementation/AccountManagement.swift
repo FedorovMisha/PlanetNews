@@ -1,36 +1,12 @@
-//
-//  AccountManagement.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 24.10.2021.
-//
-
 import Foundation
-
-
-//class AuthenticationService : Authentication{
-//
-//    private let userManager: UserManager
-//
-//    init(userManager: UserManager){
-//        self.userManager = userManager
-//    }
-//
-//    func authenticate(credentials: SignInCredentials) -> ApplicationUser? {
-//        return userManager.getUser(credentials: credentials)
-//    }
-//}
-
 
 class AuthorizationService : Authorization {
     
     private var userManager: UserManager
+
     
-//    private var authenticationService: Authentication
-    
-    init(userManger: UserManager/*authenticationService: Authentication */){
+    init(userManger: UserManager){
         self.userManager = userManger
-//        self.authenticationService = authenticationService
     }
     
     func autoLogin() -> Bool {

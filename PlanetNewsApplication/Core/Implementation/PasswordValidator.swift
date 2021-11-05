@@ -1,12 +1,4 @@
-//
-//  ValidationImplementation.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 24.10.2021.
-//
-
 import Foundation
-
 
 class PasswordValidator : Validator {
     
@@ -41,16 +33,6 @@ class ConfirmPasswordValidator : Validator {
     }
     
     func validate() -> ValidationResult {
-        
-//        guard password else {
-//            return self.ok()
-//        }
-//
-//
-//        guard let confirmPassword = confirmPassword else {
-//            return self.fail([.confirmPassword: "Confirm password is empty"])
-//        }
-
         guard password == confirmPassword else {
             return self.fail([.confirmPassword:"Confirm password is incorrect"])
         }

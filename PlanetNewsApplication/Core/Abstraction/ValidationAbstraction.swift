@@ -1,10 +1,3 @@
-//
-//  ValidationAbstraction.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 24.10.2021.
-//
-
 import Foundation
 
 enum ValidationErrorTypes{
@@ -14,7 +7,6 @@ enum ValidationErrorTypes{
     case confirmPassword
     case formLevel
 }
-
 
 typealias ValidationResult = (success: Bool, errors: [ValidationErrorTypes: String])
 

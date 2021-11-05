@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 21.10.2021.
-//
-
 import UIKit
 
 @available(iOS 13.0, *)

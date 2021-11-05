@@ -1,10 +1,3 @@
-//
-//  ColorDefaults.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 21.10.2021.
-//
-
 import UIKit
 
 struct BackgroundColors{

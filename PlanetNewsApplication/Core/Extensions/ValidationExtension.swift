@@ -1,12 +1,4 @@
-//
-//  ValidationExtension.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 24.10.2021.
-//
-
 import Foundation
-
 
 extension Validator{
     func ok() -> ValidationResult{
