@@ -5,7 +5,7 @@ class AuthorizationService : Authorization {
     private var userManager: UserManager
 
     
-    init(userManger: UserManager){
+    init(userManger: UserManager) {
         self.userManager = userManger
     }
     

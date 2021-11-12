@@ -1,11 +1,11 @@
 import Foundation
 
-class EmailValidator : Validator{
+class EmailValidator : Validator {
     
     private var email: String?
     private var emailPattern = #"^\S+@\S+\.\S+$"#
     
-    required init(email: String?){
+    required init(email: String?) {
         self.email = email
     }
     
@@ -24,6 +24,6 @@ class EmailValidator : Validator{
             return self.fail([.email: "Incorret email"])
         }
         
-        return self.ok()
+        return self.success()
     }
 }

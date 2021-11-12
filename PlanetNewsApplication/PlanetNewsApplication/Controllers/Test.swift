@@ -1,6 +1,6 @@
 import UIKit
 
-class Test: BaseVC {
+class Test: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class Test: BaseVC {
         
         let authService = AuthorizationService(userManger: userManager)
         authService.logOut()
-        let jVc = JoinVC()
+        let jVc = JoinScreenViewController()
         jVc.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(jVc, animated: true)
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-enum ValidationErrorTypes{
+enum ValidationErrorTypes {
     case email
     case password
     case name
@@ -10,6 +10,6 @@ enum ValidationErrorTypes{
 
 typealias ValidationResult = (success: Bool, errors: [ValidationErrorTypes: String])
 
-protocol Validator{
+protocol Validator {
     func validate() -> ValidationResult
 }

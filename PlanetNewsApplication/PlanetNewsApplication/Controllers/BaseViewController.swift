@@ -1,16 +1,13 @@
 import UIKit
 
-class BaseVC : UIViewController {
-
-    override var shouldAutorotate: Bool {
-        false
-    }
+class BaseViewController : UIViewController {
     
-    lazy var contentBox : UIView = {
+    lazy var contentBox : ContentView = {
         let yOffSet = self.view.bounds.height * 27.toPersent()
-        let view = UIView()
-        view.frame = self.view.bounds.getSlicedRect(xOffSet: 0, yOffSet: 27, w: 100, h: 73)
-        
+        let view = ContentView(frame: self.view.bounds.getSlicedRect(xOffSet: 0,
+                                                                     yOffSet: 27,
+                                                                     w: 100,
+                                                                     h: 73))
         return view
     }()
     
@@ -47,44 +44,14 @@ class BaseVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = BackgroundColors.baseScreenDarkGray
-        addContentBox()
         self.view.addSubview(self.mainLabel)
         self.view.addSubview(joinLabel)
         self.view.addSubview(logoImage)
+        self.view.addSubview(contentBox)
         print(view.bounds)
     }
 
-    private func addContentBox(){
-        self.view.addSubview(self.contentBox)
-        self.contentBox.backgroundColor = .clear
-        self.contentBox.layer.cornerRadius = 30
-        self.contentBox.layer.maskedCorners = [ .layerMaxXMinYCorner, .layerMinXMinYCorner]
-        // draw shadow
-        let shadow = CALayer()
-        shadow.frame = self.contentBox.bounds
-        shadow.shadowColor = ShadowColors.baseContentShadow.cgColor
-        shadow.shadowPath = UIBezierPath(roundedRect: self.contentBox.bounds, cornerRadius: 30).cgPath
-        shadow.shadowOpacity = 1
-        shadow.shadowRadius = 13
-        shadow.shadowOffset = CGSize(width: 0, height: -4)
-        shadow.zPosition = -10
-        shadow.cornerRadius = self.contentBox.layer.cornerRadius
-        shadow.maskedCorners = self.contentBox.layer.maskedCorners
-        
-        // draw background
-        
-        let bgLayer = CALayer()
-        bgLayer.frame = self.contentBox.bounds
-        bgLayer.backgroundColor = BackgroundColors.baseContentDarkGray.cgColor
-        bgLayer.zPosition = -9
-        bgLayer.cornerRadius = self.contentBox.layer.cornerRadius
-        bgLayer.maskedCorners = self.contentBox.layer.maskedCorners
-        
-        self.contentBox.layer.addSublayer(shadow)
-        self.contentBox.layer.addSublayer(bgLayer)
-    }
-
-    func createTextInput(placeHolder:String, secure:Bool, frame:CGRect) -> UITextField{
+    func createTextInput(placeHolder:String, secure:Bool, frame:CGRect) -> UITextField {
         let field = UITextField()
         field.frame = frame
         field.backgroundColor = .clear

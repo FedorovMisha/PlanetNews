@@ -1,7 +1,7 @@
 import Foundation
 
 extension Validator{
-    func ok() -> ValidationResult{
+    func success() -> ValidationResult{
         return (true, [:])
     }
     

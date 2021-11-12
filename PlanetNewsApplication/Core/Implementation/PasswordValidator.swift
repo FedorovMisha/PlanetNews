@@ -4,7 +4,7 @@ class PasswordValidator : Validator {
     
     private var password: String?
     
-    required init(password: String?){
+    required init(password: String?) {
         self.password = password
     }
     
@@ -17,7 +17,7 @@ class PasswordValidator : Validator {
             return self.fail([.password: "Password len must be great than 7"])
         }
         
-        return self.ok()
+        return self.success()
     }
 }
 
@@ -27,7 +27,7 @@ class ConfirmPasswordValidator : Validator {
     private var password: String?
     private var confirmPassword: String?
     
-    required init(password: String?, confirmPassword: String?){
+    required init(password: String?, confirmPassword: String?) {
         self.password = password
         self.confirmPassword = confirmPassword
     }
@@ -36,6 +36,6 @@ class ConfirmPasswordValidator : Validator {
         guard password == confirmPassword else {
             return self.fail([.confirmPassword:"Confirm password is incorrect"])
         }
-        return self.ok()
+        return self.success()
     }
 }

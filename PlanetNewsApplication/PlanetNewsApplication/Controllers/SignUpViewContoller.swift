@@ -1,97 +1,66 @@
 import UIKit
 
-class SignUpVC: BaseVC {
+class SignUpViewController: BaseViewController {
     let userManager = UserManagerService()
     lazy var authorizationManager: Authorization = {
         AuthorizationService(userManger: self.userManager)
     }()
     
     lazy var signUpLabel:UILabel = {
-        let label = UILabel()
-        label.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 36.53, yOffSet: 4.52, w: 30, h: 7.2)
-        
-        label.font = UIFont(name: FontNameDefaults.encodeSansBold, size: self.view.bounds.getPersentByRectHeight(persent: 3.44))
-        label.textColor = .white
-        label.text = "Sign Up"
-        label.textAlignment = .left
-        return label
+        makeSignUpLabel()
     }()
     
     lazy var nameInput:UITextField = {
-        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 17.89, w: 69.33, h: 5.02)
-        let textField = createTextInput(placeHolder: "Name", secure: false, frame: frame)
-        textField.addTarget(self, action: #selector(self.didEditingStart(_:)), for: .editingDidBegin)
-        textField.addTarget(self, action: #selector(self.didNameInputEnd(_:)), for: .editingDidEnd)
-        return textField
+        makeNameInput()
     }()
     
     lazy var emailInput: UITextField = {
-        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 28.43, w: 69.33, h: 5.02)
-        
-        let textField = createTextInput(placeHolder: "Email", secure: false, frame: frame)
-        textField.addTarget(self, action: #selector(self.didEditingStart(_:)), for: .editingDidBegin)
-        textField.addTarget(self, action: #selector(self.didEmailInputEnd(_:)), for: .editingDidEnd)
-        
-        return textField
+        makeEmailInput()
     }()
     
     lazy var passwordInput: UITextField = {
-        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 39.13, w: 69.33, h: 5.02)
-        let textField = createTextInput(placeHolder: "Password", secure: true, frame: frame)
-        textField.addTarget(self, action: #selector(self.didEditingStart(_:)), for: .editingDidBegin)
-        textField.addTarget(self, action: #selector(self.didPasswordInputEnd(_:)), for: .editingDidEnd)
-        return textField
+        makePasswordInput()
     }()
     
     lazy var confirmPasswordInput: UITextField = {
-        let frame = self.contentBox.bounds.getSlicedRect(xOffSet: 15.47, yOffSet: 49.83, w: 69.33, h: 5.02)
-        let textField = createTextInput(placeHolder: "Confirm Password", secure: true, frame: frame)
-        textField.addTarget(self, action: #selector(self.didEditingStart(_:)), for: .editingDidBegin)
-        textField.addTarget(self, action: #selector(self.didConfirmPasswordInputEnd(_:)), for: .editingDidEnd)
-        return textField
+        makeConfirmPasswordInput()
     }()
     
     lazy var submitButton : UIButton = {
-        let btn = UIButton(type:.system)
-        btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 7.2, yOffSet: 65.55, w: 85.6, h: 10.03)
-        btn.setTitle("SignUp", for: .normal)
-        btn.setTitleColor( UIColor.black, for: .normal)
-        btn.backgroundColor = .white
-        btn.layer.cornerRadius = self.view.bounds.getPersentByRectHeight(persent: 3.68)
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: self.view.bounds.getPersentByRectHeight(persent: 2.21))
-        btn.addTarget(self, action: #selector(didTouchSignUp), for: UIControl.Event.touchUpInside)
-        return btn
+        makeSubmitButton()
     }()
     
     lazy var backButton : UIButton = {
-        let fontSize = self.view.bounds.getPersentByRectHeight(persent: 2.2)
-        let btn = UIButton(type: .system)
-        btn.frame = self.contentBox.bounds.getSlicedRect(xOffSet: 44.8, yOffSet: 78.26, w: 10.67, h: 3.52)
-        btn.titleLabel?.font = UIFont(name: FontNameDefaults.robotoMedium, size: fontSize)
-        btn.setTitle("back", for: .normal)
-        btn.backgroundColor = .clear
-        btn.setTitleColor(FontColors.baseGrayColor, for: .normal)
-        btn.addTarget(self, action: #selector(self.didTouchBack), for: .touchUpInside)
-        return btn
+        makeBackButton()
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mainLabel.text = "News - find out everything"
-        self.joinLabel.text = "Join our community"
-        self.contentBox.addSubview(signUpLabel)
-        self.contentBox.addSubview(nameInput)
-        self.contentBox.addSubview(emailInput)
-        self.contentBox.addSubview(passwordInput)
-        self.contentBox.addSubview(confirmPasswordInput)
-        self.contentBox.addSubview(submitButton)
-        self.contentBox.addSubview(backButton)
+        setup()
     }
     
+    func setup() {
+        self.mainLabel.text = "News - find out everything"
+        self.joinLabel.text = "Join our community"
+        self.contentBox.addSeparator(27)
+        self.contentBox.appendView(signUpLabel)
+        self.contentBox.addSeparator(37)
+        self.contentBox.appendView(nameInput)
+        self.contentBox.addSeparator(34)
+        self.contentBox.appendView(emailInput)
+        self.contentBox.addSeparator(34)
+        self.contentBox.appendView(passwordInput)
+        self.contentBox.addSeparator(34)
+        self.contentBox.appendView(confirmPasswordInput)
+        self.contentBox.addSeparator(64)
+        self.contentBox.appendView(submitButton)
+        self.contentBox.addSeparator(27)
+        self.contentBox.appendView(backButton)
+    }
 }
 
 
-extension SignUpVC{
+extension SignUpViewController {
     
     var credentials: SignUpCredentials {
         SignUpCredentials(name: nameInput.text ?? "", email: emailInput.text ?? "", password: passwordInput.text ?? "", confirmPassword: confirmPasswordInput.text ?? "")

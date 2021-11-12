@@ -1,10 +1,10 @@
 import Foundation
 
-class NameValidator : Validator{
+class NameValidator : Validator {
     
     private var userName: String?
     
-    required init(userName: String?){
+    required init(userName: String?) {
         self.userName = userName
     }
     
@@ -13,7 +13,7 @@ class NameValidator : Validator{
             return self.fail([.name: "Name is empty"])
         }
 
-        return self.ok()
+        return self.success()
     }
 }
 

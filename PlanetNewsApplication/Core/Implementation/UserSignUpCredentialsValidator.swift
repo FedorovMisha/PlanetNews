@@ -10,7 +10,11 @@ class SignUpCredentialsValidator : Validator {
     private var credentials: SignUpCredentials
     
     
-    required init(_ credentials: SignUpCredentials, emailValidator: Validator, passwordValidator: Validator, confirmPasswordValidator: Validator, nameValidator: Validator){
+    required init(_ credentials: SignUpCredentials,
+                  emailValidator: Validator,
+                  passwordValidator: Validator,
+                  confirmPasswordValidator: Validator,
+                  nameValidator: Validator) {
         self.nameValidator = nameValidator
         self.emailValidator = emailValidator
         self.confirmPasswordValidator = confirmPasswordValidator
@@ -32,7 +36,7 @@ class SignUpCredentialsValidator : Validator {
         }
         
         guard !isSuccess else {
-            return self.ok()
+            return self.success()
         }
         
         var errorMessage: String = ""

@@ -1,6 +1,6 @@
 import Foundation
 
-protocol UserManager{
+protocol UserManager {
     var currentUser: ApplicationUser? { get set }
     func save(credentials: SignUpCredentials) -> ApplicationUser?
     func getUser(credentials: SignInCredentials) -> ApplicationUser?

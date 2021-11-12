@@ -1,6 +1,6 @@
 import Foundation
 
-class UserManagerService : UserManager{
+class UserManagerService : UserManager {
     
     private let storage = UserDefaults.standard
     
