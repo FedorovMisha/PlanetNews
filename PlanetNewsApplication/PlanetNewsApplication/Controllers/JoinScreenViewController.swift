@@ -1,57 +1,32 @@
+//
+//  JoinScreenViewController.swift
+//  PlanetNewsApplication
+//
+//  Created by Misha Fedorov on 17.11.2021.
+//
+
 import UIKit
 
-class JoinScreenViewController: BaseViewController {
-    
-    lazy var bigIcon:UIImageView = {
-        makeLogo()
-    }()
-    
-    lazy var helloLabel: UILabel = {
-        makeHelloLabel()
-    }()
-    
-    lazy var ruleLabel: UILabel = {
-        makeRuleText()
-    }()
-    
-    lazy var loginButton: UIButton = {
-        makeSignInButton()
-    }()
-    
-    lazy var signUpButton: UIButton = {
-        makeSignUpButton()
-    }()
-    
-    lazy var buttonStackView: UIStackView = {
-        makeButtonStack()
-    }()
+class JoinScreenViewController: UIViewController {
+
+    var joinScreenView: JoinScreenView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        joinScreenView = JoinScreenView(controller: self, frame: UIScreen.main.bounds)
+        self.view.backgroundColor = .red
+        self.view.addSubview(joinScreenView)
     }
     
-    func setup() {
-        self.mainLabel.text = "News - find out everything"
-        self.joinLabel.text = "Join our community"
-        self.view.addSubview(contentBox)
-        self.contentBox.appendView(UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 10)))
-        self.contentBox.appendView(bigIcon)
-        self.contentBox.appendView(helloLabel)
-        self.contentBox.appendView(ruleLabel)
-        self.contentBox.appendView(UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 40)))
-        self.contentBox.appendView(buttonStackView)
+    @objc func didTouchLoginButton() {
+        let vc = SignInViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc func onSignUpClick(){
-        let signUp = SignUpViewController()
-        signUp.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(signUp, animated: true)
-    }
-    
-    @objc func onLoginClick(){
-        let loginVC = LoginViewController()
-        loginVC.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(loginVC, animated: true)
+    @objc func didTouchSignUpButton() {
+        let vc = SignUpViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
