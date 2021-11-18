@@ -1,7 +1,7 @@
 import UIKit
 
 class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
-    var signUpController: SignUpViewController!
+    weak var signUpController: SignUpViewController?
     var baseView: BaseView!
     let data: [ContentCellTypes] = [
         .label(height: FlexSize.flexHeight(110), name: ""),
@@ -52,37 +52,37 @@ class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
         case .button(_, "submit"):
             let cell = contentTable.dequeueReusableCell(withIdentifier: "\(ButtonTableViewCell.self)", for: indexPath) as! ButtonTableViewCell
             cell.configureAsSubmitButton("Sign up")
-            cell.button.addTarget(signUpController, action: #selector(signUpController.didTouchSignUp), for: .touchUpInside)
+            cell.button.addTarget(signUpController, action: #selector(signUpController?.didTouchSignUp), for: .touchUpInside)
             return cell
         case .button(_, "back"):
             let cell = contentTable.dequeueReusableCell(withIdentifier: "\(ButtonTableViewCell.self)", for: indexPath) as! ButtonTableViewCell
             cell.configureAsBackButton("Back")
-            cell.button.addTarget(signUpController, action: #selector(signUpController.didTouchBackButton), for: .touchUpInside)
+            cell.button.addTarget(signUpController, action: #selector(signUpController?.didTouchBackButton), for: .touchUpInside)
             return cell
         case .textField(_, "userName"):
             let cell = contentTable.dequeueReusableCell(withIdentifier: "\(TextInputTableViewCell.self)", for: indexPath) as! TextInputTableViewCell
             cell.configureCell("Name")
             userNameInput = cell.inputTextField
-            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController.didNameInputEnd(_:)), for: .editingDidEnd)
+            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController?.didNameInputEnd(_:)), for: .editingDidEnd)
             return cell
         case .textField(_, "email"):
             let cell = contentTable.dequeueReusableCell(withIdentifier: "\(TextInputTableViewCell.self)", for: indexPath) as! TextInputTableViewCell
             cell.configureCell("Email")
             emailInput = cell.inputTextField
-            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController.didEmailEditingEnd(_:)), for: .editingDidEnd)
+            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController?.didEmailEditingEnd(_:)), for: .editingDidEnd)
             return cell
         case .textField(_, "password"):
             let cell = contentTable.dequeueReusableCell(withIdentifier: "\(TextInputTableViewCell.self)", for: indexPath) as! TextInputTableViewCell
             cell.configureCell("Password", isSecure: true)
             passwordInput = cell.inputTextField
-            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController.didPasswordInputEnd(_:)), for: .editingDidEnd)
-            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController.didPasswordInputStart(_:)), for: .editingDidBegin)
+            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController?.didPasswordInputEnd(_:)), for: .editingDidEnd)
+            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController?.didPasswordInputStart(_:)), for: .editingDidBegin)
             return cell
         case .textField(_, "confirmPassword"):
             let cell = contentTable.dequeueReusableCell(withIdentifier: "\(TextInputTableViewCell.self)", for: indexPath) as! TextInputTableViewCell
             cell.configureCell("Confirm password", isSecure: true)
             confirmPasswordInput = cell.inputTextField
-            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController.didConfirmPasswordInputEnd(_:)), for: .editingDidEnd)
+            cell.inputTextField.addTarget(signUpController, action: #selector(signUpController?.didConfirmPasswordInputEnd(_:)), for: .editingDidEnd)
             return cell
         default:
             fatalError()

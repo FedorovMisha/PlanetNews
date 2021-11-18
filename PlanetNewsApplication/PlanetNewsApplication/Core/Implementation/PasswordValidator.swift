@@ -1,6 +1,6 @@
 import Foundation
 
-class PasswordValidator : Validator {
+class PasswordValidator: Validator {
     
     private var password: String?
     
@@ -22,7 +22,7 @@ class PasswordValidator : Validator {
 }
 
 
-class ConfirmPasswordValidator : Validator {
+class ConfirmPasswordValidator: Validator {
     
     private var password: String?
     private var confirmPassword: String?

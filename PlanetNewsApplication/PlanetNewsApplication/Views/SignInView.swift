@@ -1,7 +1,7 @@
 import UIKit
 
 class SignInView: UIView, UITableViewDataSource, UITableViewDelegate {
-    var signInController: SignInViewController?
+    weak var signInController: SignInViewController?
     var baseView: BaseView!
     var emailInput: UITextField?
     var passwordInput: UITextField?

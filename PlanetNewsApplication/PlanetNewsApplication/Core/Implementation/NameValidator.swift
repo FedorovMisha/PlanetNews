@@ -1,6 +1,6 @@
 import Foundation
 
-class NameValidator : Validator {
+class NameValidator: Validator {
     
     private var userName: String?
     

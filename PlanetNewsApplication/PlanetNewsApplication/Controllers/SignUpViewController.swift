@@ -95,7 +95,7 @@ class SignUpViewController: UIViewController {
     
     private func updateTextFieldByValidationResult(_ field: UITextField, result: ValidationResult) {
         if result.success {
-            field.textColor = .systemGreen
+            field.attributedText = NSAttributedString(string: field.text ?? "", attributes: [.foregroundColor: UIColor.systemGreen])
             return
         }
         

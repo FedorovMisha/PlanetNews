@@ -1,6 +1,6 @@
 import Foundation
 
-class EmailValidator : Validator {
+class EmailValidator: Validator {
     
     private var email: String?
     private var emailPattern = #"^\S+@\S+\.\S+$"#

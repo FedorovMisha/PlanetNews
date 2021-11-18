@@ -1,6 +1,6 @@
 import Foundation
 
-class AuthorizationService : Authorization {
+class AuthorizationService: Authorization {
     
     private var userManager: UserManager
 

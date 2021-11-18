@@ -6,7 +6,7 @@ class SignUpCredentials {
     var confirmPassword: String
     var name: String
     
-    init(name: String, email: String, password: String, confirmPassword: String){
+    init(name: String, email: String, password: String, confirmPassword: String) {
         self.name = name
         self.email = email
         self.password = password

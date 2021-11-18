@@ -1,7 +1,7 @@
 import Foundation
 
 
-class SignUpCredentialsValidator : Validator {
+class SignUpCredentialsValidator: Validator {
     
     private var emailValidator: Validator
     private var passwordValidator: Validator
