@@ -1,10 +1,3 @@
-//
-//  TextInputTableViewCell.swift
-//  PlanetNewsApplication
-//
-//  Created by Misha Fedorov on 17.11.2021.
-//
-
 import UIKit
 
 class TextInputTableViewCell: UITableViewCell {

@@ -1,9 +1,9 @@
 import UIKit
 
 class ButtonStackTableViewCell: UITableViewCell {
-    var buttons: [UIButton] = [] {
+    var buttons: [UIButton]? = nil {
         didSet {
-            buttons.forEach {
+            buttons?.forEach {
                 buttonStack.addArrangedSubview($0)
             }
         }
@@ -22,6 +22,7 @@ class ButtonStackTableViewCell: UITableViewCell {
     }
     
     func configure(_ buttons: UIButton...) {
+        guard self.buttons == nil else { return }
         self.buttons = buttons
         buttonStack.backgroundColor = .clear
         buttonStack.axis = .horizontal
