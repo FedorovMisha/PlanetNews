@@ -17,13 +17,13 @@ class SignUpViewModel {
         var height: Double {
             switch self {
             case .textInput(.confirmPassword):
-                return 90.0
+                return FlexSize.height(90)
             case .textInput:
-                return 70.0
+                return FlexSize.height(70)
             case .submitButton:
-                return 70
+                return FlexSize.height(70)
             case .backButton:
-                return 60
+                return FlexSize.height(300)
             }
         }
     }
@@ -31,6 +31,7 @@ class SignUpViewModel {
     enum InputTypes {
         case name, email, password, confirmPassword
     }
+    
     struct PropertyInfo {
         var placeholder: String = ""
         var value: String = ""
@@ -44,8 +45,9 @@ class SignUpViewModel {
     var nameValidator = NameValidator(name: "")
     var passwordValidator = PasswordValidator(password: "")
     var confirmPasswordValidator = ConfirmPassworValidator(password: "", confirmPassword: "")
-    var successSignUpDelegate: (() -> Void)?
-    var failValidationDelegate: (() -> Void)?
+    var userManager = UserManager()
+    var successSignUpDelegate: ((ApplicationUser) -> Void)?
+    var failValidationDelegate: (([ValidationResult]) -> Void)?
     var failSignUpDelegate: (() -> Void)?
     
     func propertyInfo(by type: InputTypes) -> PropertyInfo {
@@ -75,30 +77,34 @@ class SignUpViewModel {
         switch key {
         case .name:
             credentials.name = text
+            nameValidator.name = text
         case .email:
             credentials.email = text
+            emailValidator.email = text
         case .password:
             credentials.password = text
+            passwordValidator.password = text
+            confirmPasswordValidator.password = text
         case .confirmPassword:
             credentials.confirmPassword = text
+            confirmPasswordValidator.confirmPassword = text
         }
     }
     
     func signUp() {
         if validateForm() {
-            // Sign in
+            guard let user = userManager.signUp(use: credentials) else {
+                failSignUpDelegate?()
+                return
+            }
+            successSignUpDelegate?(user)
             return
         }
         
-        failValidationDelegate?()
+        failValidationDelegate?(validationState)
     }
     
     func validateForm() -> Bool {
-        emailValidator.email = credentials.email
-        nameValidator.name = credentials.name
-        passwordValidator.password = credentials.password
-        confirmPasswordValidator.password = credentials.password
-        confirmPasswordValidator.confirmPassword = credentials.confirmPassword
         validationState = [
             nameValidator.validate(),
             emailValidator.validate(),

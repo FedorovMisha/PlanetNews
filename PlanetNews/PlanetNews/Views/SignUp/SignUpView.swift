@@ -10,6 +10,7 @@ class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         return tableView
     }()
+    
     lazy var headerView: UIView = {
         let view = UIView(frame: FlexSize.rect(sample: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 100)))
         let label = UILabel(frame: FlexSize.rect(sample: CGRect(x: 137, y: 27, width: 120, height: 43)))
@@ -67,8 +68,7 @@ class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
                 fatalError()
             }
             cell.configure(placeholder: propetyInfo.placeholder, value: propetyInfo.value, error: propetyInfo.error, isSecure: propetyInfo.isSecure)
-            print(cell.frame.width)
-            print("HJasdf")
+
             cell.didEditingChangeDelegate = { [weak self] text in
                 self?.updateFieldDelegate?(target, text)
             }

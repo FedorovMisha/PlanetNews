@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B061EFF2756258400FA8C4D /* JsonManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061EFE2756258400FA8C4D /* JsonManagerProtocol.swift */; };
+		4B061F012756259800FA8C4D /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F002756259800FA8C4D /* JsonManager.swift */; };
+		4B061F032756264B00FA8C4D /* UserManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F022756264B00FA8C4D /* UserManagerProtocol.swift */; };
+		4B061F06275626C800FA8C4D /* ApplicationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F05275626C800FA8C4D /* ApplicationUser.swift */; };
+		4B061F08275627DB00FA8C4D /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F07275627DB00FA8C4D /* UserRepositoryProtocol.swift */; };
+		4B061F0A2756285D00FA8C4D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F092756285D00FA8C4D /* UserRepository.swift */; };
+		4B061F0C27562B6800FA8C4D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F0B27562B6800FA8C4D /* UserManager.swift */; };
 		4B9C7287275526170075C59A /* JoinScreenInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C7286275526170075C59A /* JoinScreenInfoViewCell.swift */; };
 		4B9C72892755264E0075C59A /* JoinScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C72882755264E0075C59A /* JoinScreenView.swift */; };
 		4B9C728B2755287E0075C59A /* JoinButtonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C728A2755287E0075C59A /* JoinButtonsViewCell.swift */; };
@@ -21,6 +28,9 @@
 		4B9C72AF27557DF90075C59A /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C72AE27557DF90075C59A /* PasswordValidator.swift */; };
 		4B9C72B127557E520075C59A /* ConfirmPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C72B027557E520075C59A /* ConfirmPasswordValidator.swift */; };
 		4B9C72B327557EA30075C59A /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C72B227557EA30075C59A /* EmailValidator.swift */; };
+		4BC4985427563869006EF8DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4985327563869006EF8DF /* TestViewController.swift */; };
+		4BC4985627563DFC006EF8DF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4985527563DFC006EF8DF /* SignInViewModel.swift */; };
+		4BC4985A27564B2F006EF8DF /* TextFieldViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4985927564B2F006EF8DF /* TextFieldViewCell+Extensions.swift */; };
 		4BC72E882754C5760092ECEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC72E872754C5760092ECEC /* AppDelegate.swift */; };
 		4BC72E912754C5760092ECEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC72E902754C5760092ECEC /* Assets.xcassets */; };
 		4BC72E942754C5760092ECEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC72E922754C5760092ECEC /* LaunchScreen.storyboard */; };
@@ -52,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B061EFE2756258400FA8C4D /* JsonManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManagerProtocol.swift; sourceTree = "<group>"; };
+		4B061F002756259800FA8C4D /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
+		4B061F022756264B00FA8C4D /* UserManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerProtocol.swift; sourceTree = "<group>"; };
+		4B061F05275626C800FA8C4D /* ApplicationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUser.swift; sourceTree = "<group>"; };
+		4B061F07275627DB00FA8C4D /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		4B061F092756285D00FA8C4D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		4B061F0B27562B6800FA8C4D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		4B9C7286275526170075C59A /* JoinScreenInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreenInfoViewCell.swift; sourceTree = "<group>"; };
 		4B9C72882755264E0075C59A /* JoinScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreenView.swift; sourceTree = "<group>"; };
 		4B9C728A2755287E0075C59A /* JoinButtonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButtonsViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +83,9 @@
 		4B9C72AE27557DF90075C59A /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		4B9C72B027557E520075C59A /* ConfirmPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordValidator.swift; sourceTree = "<group>"; };
 		4B9C72B227557EA30075C59A /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		4BC4985327563869006EF8DF /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4BC4985527563DFC006EF8DF /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		4BC4985927564B2F006EF8DF /* TextFieldViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		4BC72E842754C5760092ECEC /* PlanetNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC72E872754C5760092ECEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC72E902754C5760092ECEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,11 +129,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B061F04275626A900FA8C4D /* Entitites */ = {
+			isa = PBXGroup;
+			children = (
+				4B061F05275626C800FA8C4D /* ApplicationUser.swift */,
+			);
+			path = Entitites;
+			sourceTree = "<group>";
+		};
 		4B9C728E275534540075C59A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4B9C72AA275579E80075C59A /* Implementation */,
 				4B9C72A6275578230075C59A /* Abstractions */,
+				4B061F04275626A900FA8C4D /* Entitites */,
+				4B9C72AA275579E80075C59A /* Implementation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -121,7 +150,10 @@
 		4B9C72A6275578230075C59A /* Abstractions */ = {
 			isa = PBXGroup;
 			children = (
+				4B061F022756264B00FA8C4D /* UserManagerProtocol.swift */,
 				4B9C72A7275578340075C59A /* Validation.swift */,
+				4B061EFE2756258400FA8C4D /* JsonManagerProtocol.swift */,
+				4B061F07275627DB00FA8C4D /* UserRepositoryProtocol.swift */,
 			);
 			path = Abstractions;
 			sourceTree = "<group>";
@@ -130,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				4B9C72AB275579EF0075C59A /* Validators */,
+				4B061F002756259800FA8C4D /* JsonManager.swift */,
+				4B061F092756285D00FA8C4D /* UserRepository.swift */,
+				4B061F0B27562B6800FA8C4D /* UserManager.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -195,6 +230,7 @@
 				4BC72ED42754EF820092ECEC /* SignIn */,
 				4BC72EA42754C8110092ECEC /* Shared */,
 				4BC72EA12754C6FB0092ECEC /* JoinScreen */,
+				4BC4985327563869006EF8DF /* TestViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +240,7 @@
 			children = (
 				4BC72ECE2754EC690092ECEC /* JoinScreenViewModel.swift */,
 				4B9C728C2755338A0075C59A /* SignUpViewModel.swift */,
+				4BC4985527563DFC006EF8DF /* SignInViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -253,6 +290,7 @@
 			children = (
 				4BC72EA82754C9630092ECEC /* Number+Extensions.swift */,
 				4BC72EDD2754F4BD0092ECEC /* UIView+Extensions.swift */,
+				4BC4985927564B2F006EF8DF /* TextFieldViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,15 +436,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9C72B127557E520075C59A /* ConfirmPasswordValidator.swift in Sources */,
+				4B061EFF2756258400FA8C4D /* JsonManagerProtocol.swift in Sources */,
+				4B061F08275627DB00FA8C4D /* UserRepositoryProtocol.swift in Sources */,
+				4B061F0C27562B6800FA8C4D /* UserManager.swift in Sources */,
 				4B9C728B2755287E0075C59A /* JoinButtonsViewCell.swift in Sources */,
+				4B061F032756264B00FA8C4D /* UserManagerProtocol.swift in Sources */,
+				4BC4985627563DFC006EF8DF /* SignInViewModel.swift in Sources */,
 				4BC72EC22754CF370092ECEC /* ImageConstants.swift in Sources */,
 				4BC72EA62754C83D0092ECEC /* FlexSize.swift in Sources */,
 				4B9C72AD27557BDF0075C59A /* NameValidator.swift in Sources */,
+				4BC4985A27564B2F006EF8DF /* TextFieldViewCell+Extensions.swift in Sources */,
 				4B9C72A52755732D0075C59A /* TextButtonViewCell.swift in Sources */,
+				4BC4985427563869006EF8DF /* TestViewController.swift in Sources */,
 				4BC72ECF2754EC690092ECEC /* JoinScreenViewModel.swift in Sources */,
 				4BC72EBE2754CCE50092ECEC /* FontConstants.swift in Sources */,
 				4BC72EA32754C7150092ECEC /* JoinScreenViewController.swift in Sources */,
+				4B061F06275626C800FA8C4D /* ApplicationUser.swift in Sources */,
 				4B9C7297275535DF0075C59A /* SignUpCredentials.swift in Sources */,
+				4B061F012756259800FA8C4D /* JsonManager.swift in Sources */,
 				4B9C72AF27557DF90075C59A /* PasswordValidator.swift in Sources */,
 				4BC72EC62754D4FB0092ECEC /* TextConstants.swift in Sources */,
 				4BC72EC02754CE270092ECEC /* ColorConstants.swift in Sources */,
@@ -428,6 +475,7 @@
 				4BC72EE82754FF240092ECEC /* WhiteButton.swift in Sources */,
 				4BC72EC42754D09D0092ECEC /* HeaderView.swift in Sources */,
 				4B9C7287275526170075C59A /* JoinScreenInfoViewCell.swift in Sources */,
+				4B061F0A2756285D00FA8C4D /* UserRepository.swift in Sources */,
 				4B9C72892755264E0075C59A /* JoinScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
