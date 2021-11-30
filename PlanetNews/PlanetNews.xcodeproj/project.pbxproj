@@ -59,6 +59,7 @@
 		4BC72EDE2754F4BD0092ECEC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC72EDD2754F4BD0092ECEC /* UIView+Extensions.swift */; };
 		4BC72EE82754FF240092ECEC /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC72EE72754FF240092ECEC /* WhiteButton.swift */; };
 		4BC72EED275507970092ECEC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC72EEC275507970092ECEC /* SignInView.swift */; };
+		4BFC7DF72756961C004C4F72 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFC7DF62756961C004C4F72 /* ErrorMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		4BC72EDD2754F4BD0092ECEC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		4BC72EE72754FF240092ECEC /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		4BC72EEC275507970092ECEC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		4BFC7DF62756961C004C4F72 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			children = (
 				4BC72EA02754C6D40092ECEC /* Constants */,
 				4BC72EA52754C83D0092ECEC /* FlexSize.swift */,
+				4BFC7DF62756961C004C4F72 /* ErrorMessages.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				4BC72EA62754C83D0092ECEC /* FlexSize.swift in Sources */,
 				4B9C72AD27557BDF0075C59A /* NameValidator.swift in Sources */,
 				4BC4985A27564B2F006EF8DF /* TextFieldViewCell+Extensions.swift in Sources */,
+				4BFC7DF72756961C004C4F72 /* ErrorMessages.swift in Sources */,
 				4B9C72A52755732D0075C59A /* TextButtonViewCell.swift in Sources */,
 				4BC4985427563869006EF8DF /* TestViewController.swift in Sources */,
 				4BC72ECF2754EC690092ECEC /* JoinScreenViewModel.swift in Sources */,

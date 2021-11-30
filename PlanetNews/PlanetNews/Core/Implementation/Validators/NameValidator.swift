@@ -5,7 +5,7 @@ struct NameValidator: Validator {
     
     func validate() -> ValidationResult {
         guard name.count > 4 else {
-            return .fail(.name, "Name is short")
+            return .fail(.name, ErrorMessages.nameIsShort)
         }
         return .success(.name)
     }

@@ -15,7 +15,7 @@ class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
         let view = UIView(frame: FlexSize.rect(sample: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 100)))
         let label = UILabel(frame: FlexSize.rect(sample: CGRect(x: 137, y: 27, width: 120, height: 43)))
         label.toHorizontalCenter(by: self.tableView)
-        label.text = "Sign Up"
+        label.text = TextConstants.signUpTitle
         label.font = FontConstants.encodeSansBold.withSize(FlexSize.height(28))
         label.textColor = ColorConstants.white
         view.addSubview(label)
@@ -76,7 +76,7 @@ class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
             guard let cell = cell as? ButtonViewCell else {
                 fatalError()
             }
-            cell.configure(title: "Sign Up")
+            cell.configure(title: TextConstants.signUpButtonTitle)
             cell.buttonPressedDelegate = { [weak self] in
                 self?.submitDelegate?()
             }
@@ -84,7 +84,7 @@ class SignUpView: UIView, UITableViewDataSource, UITableViewDelegate {
             guard let cell = cell as? TextButtonViewCell else {
                 fatalError()
             }
-            cell.configure(title: "Back")
+            cell.configure(title: TextConstants.signUpBackButton)
             cell.buttonPressedDelegate = { [weak self] in
                 self?.backDelegate?()
             }

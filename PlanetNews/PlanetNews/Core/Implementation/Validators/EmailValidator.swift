@@ -12,7 +12,7 @@ struct EmailValidator: Validator {
         let regexResult = emailRegex.matches(in: email, options: [], range: emailRange)
         
         guard regexResult.count != 0 else {
-            return .fail(.email, "Invalid email")
+            return .fail(.email, ErrorMessages.emailInvalid)
         }
         
         return .success(.email)

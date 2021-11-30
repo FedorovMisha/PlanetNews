@@ -6,7 +6,7 @@ struct ConfirmPassworValidator: Validator {
     
     func validate() -> ValidationResult {
         guard password == confirmPassword else {
-            return .fail(.confirmPassword, "Not contains")
+            return .fail(.confirmPassword, ErrorMessages.confirmPasswordError)
         }
         
         return .success(.confirmPassword)

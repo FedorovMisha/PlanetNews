@@ -11,10 +11,6 @@ class ContentViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func display(_ layer: CALayer) {
-        super.display(layer)
-    }
-    
     func configure(use view: UIView) {
         guard usingView == nil else {
             return
@@ -22,6 +18,10 @@ class ContentViewCell: UITableViewCell {
         usingView = view
         usingView?.frame = contentView.frame
         contentView.addSubview(view)
+        setupBackground()
+    }
+    
+    private func setupBackground() {
         backgroundColor = .clear
         selectionStyle = .none
         contentView.backgroundColor = .clear

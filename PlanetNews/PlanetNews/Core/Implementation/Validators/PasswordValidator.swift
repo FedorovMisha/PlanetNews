@@ -5,7 +5,7 @@ struct PasswordValidator: Validator {
     
     func validate() -> ValidationResult {
         guard password.count > 7 else {
-            return .fail(.password, "Small password")
+            return .fail(.password, ErrorMessages.passwordIsShort)
         }
         return .success(.password)
     }

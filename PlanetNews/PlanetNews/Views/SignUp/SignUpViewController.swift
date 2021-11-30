@@ -39,22 +39,20 @@ class SignUpViewController: UIViewController {
                 message.append(contentsOf: "\n \(error)")
             }
         }
-        let alertVc = UIAlertController(title: "Incorrect data", message: message, preferredStyle: .alert)
-        alertVc.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alertVc = UIAlertController(title: TextConstants.signUpValidationFailTitle, message: message, preferredStyle: .alert)
+        alertVc.addAction(UIAlertAction(title: TextConstants.signUpContinueButtonText, style: .cancel, handler: nil))
         self.present(alertVc, animated: true, completion: nil)
     }
     
     func failSignUp() {
-        let message = "Fail sign up\n - User exists\n OR\n- Application Errro"
-        let alertVc = UIAlertController(title: "Fail Sign Up", message: message, preferredStyle: .alert)
-        alertVc.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alertVc = UIAlertController(title: TextConstants.signUpFailTitle, message: TextConstants.signUpFailMessage, preferredStyle: .alert)
+        alertVc.addAction(UIAlertAction(title: TextConstants.signUpContinueButtonText, style: .cancel, handler: nil))
         self.present(alertVc, animated: true, completion: nil)
     }
     
     func successSignUp(_ user: ApplicationUser) {
-        let message = "Welcome to planet news!!!"
-        let alertVc = UIAlertController(title: "Hi, \(user.name)", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Continue",
+        let alertVc = UIAlertController(title: "Hi, \(user.name)", message: TextConstants.signUpWelcomeMessage, preferredStyle: .alert)
+        let action = UIAlertAction(title: TextConstants.signUpContinueButtonText,
                                    style: .default) { [weak self] _ in
             let vc = TestViewController()
             vc.modalPresentationStyle = .fullScreen

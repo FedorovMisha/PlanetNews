@@ -17,7 +17,7 @@ class SignInView: UIView, UITableViewDataSource, UITableViewDelegate {
         let view = UIView(frame: FlexSize.rect(sample: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 200)))
         let label = UILabel(frame: FlexSize.rect(sample: CGRect(x: 137, y: 27, width: 120, height: 43)))
         label.toHorizontalCenter(by: self.tableView)
-        label.text = "Login"
+        label.text = TextConstants.signInTitle
         label.textAlignment = .center
         label.font = FontConstants.encodeSansBold.withSize(FlexSize.height(28))
         label.textColor = ColorConstants.white
@@ -81,7 +81,7 @@ class SignInView: UIView, UITableViewDataSource, UITableViewDelegate {
             guard let cell = cell as? ButtonViewCell else {
                 fatalError()
             }
-            cell.configure(title: "Login")
+            cell.configure(title: TextConstants.signInButtonTitle)
             cell.buttonPressedDelegate = { [weak self] in
                 self?.submitDelegate?()
             }
@@ -89,7 +89,7 @@ class SignInView: UIView, UITableViewDataSource, UITableViewDelegate {
             guard let cell = cell as? TextButtonViewCell else {
                 fatalError()
             }
-            cell.configure(title: "Back")
+            cell.configure(title: TextConstants.signInBackButton)
             cell.buttonPressedDelegate = { [weak self] in
                 self?.backDelegate?()
             }
