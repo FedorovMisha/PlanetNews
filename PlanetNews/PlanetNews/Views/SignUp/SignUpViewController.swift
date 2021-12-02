@@ -13,6 +13,10 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(applicationTable)
+        bind()
+    }
+
+    func bind() {
         signUpView.propertyInfoDelegate = signUpViewModel.propertyInfo(by:)
         signUpView.updateFieldDelegate = signUpViewModel.updateField(by:text:)
         signUpView.submitDelegate = self.touchSignUpButton
@@ -21,7 +25,7 @@ class SignUpViewController: UIViewController {
         signUpViewModel.failValidationDelegate = self.failValidation(state:)
         signUpViewModel.successSignUpDelegate = self.successSignUp(_:)
     }
-
+    
     func touchSignUpButton() {
         signUpViewModel.signUp()
     }

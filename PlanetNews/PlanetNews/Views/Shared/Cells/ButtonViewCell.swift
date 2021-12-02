@@ -9,9 +9,7 @@ class ButtonViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         selectionStyle = .none
-        button.frame = CGRect(x: 0, y: 0, width: 320, height: 60)
-        contentView.addSubview(button)
-        button.addTarget(self, action: #selector(didTouchButton), for: .touchUpInside)
+        setupButton()
     }
 
     required init?(coder: NSCoder) {
@@ -29,5 +27,11 @@ class ButtonViewCell: UITableViewCell {
     
     @objc func didTouchButton() {
         buttonPressedDelegate?()
+    }
+    
+    func setupButton() {
+        button.frame = CGRect(x: 0, y: 0, width: 320, height: 60)
+        contentView.addSubview(button)
+        button.addTarget(self, action: #selector(didTouchButton), for: .touchUpInside)
     }
 }

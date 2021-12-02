@@ -15,6 +15,10 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(applicationTable)
+        bind()
+    }
+    
+    func bind() {
         self.signInView.submitDelegate = self.didTouchSignInButton
         self.signInView.backDelegate = self.didTouchBackButton
         self.signInView.updateFieldDelegate = self.signInViewModel.updateField(by:text:)

@@ -14,11 +14,12 @@ class JoinScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
         view.addSubview(applicationTable)
-        
+        bind()
+    }
+    
+    func bind() {
         joinScreenViewModel.navigationController = self.navigationController
         joinScreenView.didButtonTouchDelegate = joinScreenViewModel.buttonPressed(type:)
     }
-
 }

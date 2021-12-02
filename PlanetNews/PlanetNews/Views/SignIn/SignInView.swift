@@ -14,21 +14,7 @@ class SignInView: UIView, UITableViewDataSource, UITableViewDelegate {
         return tableView
     }()
     lazy var headerView: UIView = {
-        let view = UIView(frame: FlexSize.rect(sample: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 200)))
-        let label = UILabel(frame: FlexSize.rect(sample: CGRect(x: 137, y: 27, width: 120, height: 43)))
-        label.toHorizontalCenter(by: self.tableView)
-        label.text = TextConstants.signInTitle
-        label.textAlignment = .center
-        label.font = FontConstants.encodeSansBold.withSize(FlexSize.height(28))
-        label.textColor = ColorConstants.white
-        view.addSubview(label)
-        let imageView = UIImageView(image: ImageConstants.loginImage)
-        imageView.frame = FlexSize.rect(sample: CGRect(x: 120, y: 100, width: 64, height: 64))
-        let size = FlexSize.height(78)
-        imageView.frame.size = CGSize(width: size, height: size)
-        imageView.toHorizontalCenter(by: self.tableView)
-        view.addSubview(imageView)
-        return view
+        SignInHeaderView(frame: FlexSize.rect(sample: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 200)))
     }()
     
     

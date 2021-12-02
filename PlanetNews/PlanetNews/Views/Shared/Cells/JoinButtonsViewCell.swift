@@ -12,17 +12,9 @@ class JoinButtonsViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = .clear
-        buttonStackView.frame = FlexSize.rect(sample: CGRect(x: 0, y: 0, width: 338, height: 60))
-        buttonStackView.backgroundColor = .clear
-        buttonStackView.axis = .horizontal
-        buttonStackView.alignment = .fill
-        buttonStackView.spacing = FlexSize.height(60)
-        buttonStackView.distribution = .fillEqually
-        buttonStackView.addArrangedSubview(signInButton)
-        buttonStackView.addArrangedSubview(signUpButton)
+        setupButtonStackView()
         signInButton.addTarget(self, action: #selector(self.didTouchSignInButton), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(self.didTouchSignUpButton), for: .touchUpInside)
-        contentView.addSubview(buttonStackView)
     }
     
     required init?(coder: NSCoder) {
@@ -41,5 +33,17 @@ class JoinButtonsViewCell: UITableViewCell {
     
     @objc func didTouchSignUpButton() {
         signUpDelegate?()
+    }
+    
+    func setupButtonStackView() {
+        buttonStackView.frame = FlexSize.rect(sample: CGRect(x: 0, y: 0, width: 338, height: 60))
+        buttonStackView.backgroundColor = .clear
+        buttonStackView.axis = .horizontal
+        buttonStackView.alignment = .fill
+        buttonStackView.spacing = FlexSize.height(60)
+        buttonStackView.distribution = .fillEqually
+        buttonStackView.addArrangedSubview(signInButton)
+        buttonStackView.addArrangedSubview(signUpButton)
+        contentView.addSubview(buttonStackView)
     }
 }

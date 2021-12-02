@@ -8,21 +8,8 @@ class TextFieldViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         selectionStyle = .none
-        textField.font = FontConstants.robotoMedium.withSize(FlexSize.height(18))
-        textField.backgroundColor = .clear
-        textField.frame = FlexSize.rect(sample: CGRect(x: 0, y: 0, width: 260, height: 35))
-        textField.textColor = .white
-        let underline = CALayer()
-        underline.frame = CGRect(x: 0, y: textField.frame.height, width: textField.frame.width, height: 2)
-        underline.backgroundColor = ColorConstants.inputBorderGray.cgColor
-        textField.layer.addSublayer(underline)
-        textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
-        textField.rightViewMode = .always
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
-        textField.leftViewMode = .always
-        contentView.addSubview(textField)
-        textField.addTarget(self, action: #selector(didTextFieldChanged(_:)), for: .editingChanged)
-        textField.addTarget(self, action: #selector(didEditingStart(_:)), for: .editingDidBegin)
+        setupFieldView()
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -38,7 +25,7 @@ class TextFieldViewCell: UITableViewCell {
         textField.text = value
         textField.isSecureTextEntry = isSecure
         textField.attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                             attributes: [.foregroundColor: error == nil ? ColorConstants.white: UIColor.systemRed])
+                                                             attributes: [.foregroundColor: error == nil ? ColorConstants.grayFont: UIColor.systemRed])
         textField.textColor = error == nil ? .green: .red;
     }
     
@@ -48,5 +35,26 @@ class TextFieldViewCell: UITableViewCell {
     
     @objc func didTextFieldChanged(_ textField: UITextField) {
         didEditingChangeDelegate?(textField.text ?? "")
+    }
+    
+    func bind() {
+        textField.addTarget(self, action: #selector(didTextFieldChanged(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(didEditingStart(_:)), for: .editingDidBegin)
+    }
+    
+    func setupFieldView() {
+        textField.font = FontConstants.robotoMedium.withSize(FlexSize.height(18))
+        textField.backgroundColor = .clear
+        textField.frame = FlexSize.rect(sample: CGRect(x: 0, y: 0, width: 260, height: 35))
+        textField.textColor = .white
+        let underline = CALayer()
+        underline.frame = CGRect(x: 0, y: textField.frame.height, width: textField.frame.width, height: 2)
+        underline.backgroundColor = ColorConstants.inputBorderGray.cgColor
+        textField.layer.addSublayer(underline)
+        textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
+        textField.rightViewMode = .always
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
+        textField.leftViewMode = .always
+        contentView.addSubview(textField)
     }
 }
