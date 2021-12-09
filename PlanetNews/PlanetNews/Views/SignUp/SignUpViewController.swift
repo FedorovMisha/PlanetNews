@@ -58,7 +58,7 @@ class SignUpViewController: UIViewController {
         let alertVc = UIAlertController(title: "Hi, \(user.name)", message: TextConstants.signUpWelcomeMessage, preferredStyle: .alert)
         let action = UIAlertAction(title: TextConstants.signUpContinueButtonText,
                                    style: .default) { [weak self] _ in
-            let vc = TestViewController()
+            let vc = ApplicationTabBarController()
             vc.modalPresentationStyle = .fullScreen
             self?.navigationController?.pushViewController(vc, animated: true)
         }

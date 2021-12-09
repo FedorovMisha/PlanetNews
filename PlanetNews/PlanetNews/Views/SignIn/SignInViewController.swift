@@ -24,7 +24,7 @@ class SignInViewController: UIViewController {
         self.signInView.updateFieldDelegate = self.signInViewModel.updateField(by:text:)
         
         self.signInViewModel.successSignInDelegate = { [weak self] in
-            let vc = TestViewController()
+            let vc = ApplicationTabBarController()
             vc.modalPresentationStyle = .fullScreen
             self?.navigationController?.pushViewController(vc, animated: true)
         }

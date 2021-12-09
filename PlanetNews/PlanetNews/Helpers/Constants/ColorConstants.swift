@@ -8,5 +8,5 @@ struct ColorConstants {
     static let grayFont = UIColor(red: 0.475, green: 0.475, blue: 0.478, alpha: 1)
     static let clickedGray = UIColor(red: 0.675, green: 0.675, blue: 0.675, alpha: 1)
     static let white = UIColor.white
-
+    static let circleButtonBackground = UIColor(red: 0.09, green: 0.09, blue: 0.09, alpha: 1)
 }
