@@ -2,11 +2,7 @@ import UIKit
 
 class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     
-    var data: [News] = [
-        News(source: Source(id: nil, name: "1"), author: "", title: "Title", description: "123", url: "", urlToImage: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg", publishedAt: "", content: ""),
-        News(source: Source(id: nil, name: "1"), author: "", title: "123", description: "123", url: "", urlToImage: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg", publishedAt: "", content: ""),
-        News(source: Source(id: nil, name: "1"), author: "", title: "123", description: "123", url: "", urlToImage: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg", publishedAt: "", content: "")
-    ]
+    var data: [News] = []
     var nextPageDelegate: (() -> Void)?
     
     lazy var tableView: UITableView = {
@@ -29,8 +25,14 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func insertNews(news: [News]) {
-        self.data.append(contentsOf: news)
-        self.tableView.reloadData()
+        let oldCount = data.count
+        data.append(contentsOf: news)
+        DispatchQueue.main.async {
+            let indexes = (oldCount..<(oldCount + news.count)).map { i in
+                IndexPath(row: i, section: 0)
+            }
+            self.tableView.insertRows(at: indexes, with: .automatic)
+        }
     }
     
 //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -60,12 +62,13 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     private func configureTableView() {
         addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tableView.leftAnchor.constraint(equalTo: leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: rightAnchor),
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.bottomAnchor.constraint(equalTo:  bottomAnchor)
-        ])
+        tableView.frame = UIScreen.main.bounds
+//        tableView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            tableView.leftAnchor.constraint(equalTo: leftAnchor),
+//            tableView.rightAnchor.constraint(equalTo: rightAnchor),
+//            tableView.topAnchor.constraint(equalTo: topAnchor),
+//            tableView.bottomAnchor.constraint(equalTo:  bottomAnchor)
+//        ])
     }
 }
