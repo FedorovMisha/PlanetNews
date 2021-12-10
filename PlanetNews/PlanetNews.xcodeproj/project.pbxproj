@@ -70,6 +70,9 @@
 		4BC7C7EF27622F7900BAEAD6 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7C7EE27622F7900BAEAD6 /* CircleButton.swift */; };
 		4BC7C7F327623F8C00BAEAD6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7C7F227623F8C00BAEAD6 /* AccountViewController.swift */; };
 		4BC7C7F527623FA600BAEAD6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7C7F427623FA600BAEAD6 /* SearchViewController.swift */; };
+		4BE8CDF82762B29900AFC0F6 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8CDF72762B29900AFC0F6 /* FeedView.swift */; };
+		4BE8CDFA2762B35F00AFC0F6 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8CDF92762B35F00AFC0F6 /* NewsViewCell.swift */; };
+		4BE8CDFC2762B6C000AFC0F6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8CDFB2762B6C000AFC0F6 /* FeedViewModel.swift */; };
 		4BFC7DF72756961C004C4F72 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFC7DF62756961C004C4F72 /* ErrorMessages.swift */; };
 		B3A9EE2348ED64B18B905210 /* Pods_PlanetNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E63E5FA5D41042888E43F2 /* Pods_PlanetNews.framework */; };
 /* End PBXBuildFile section */
@@ -142,6 +145,9 @@
 		4BC7C7EE27622F7900BAEAD6 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		4BC7C7F227623F8C00BAEAD6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4BC7C7F427623FA600BAEAD6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4BE8CDF72762B29900AFC0F6 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		4BE8CDF92762B35F00AFC0F6 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
+		4BE8CDFB2762B6C000AFC0F6 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		4BFC7DF62756961C004C4F72 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		8948F37507AA1582297F6F52 /* Pods-PlanetNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetNews.debug.xcconfig"; path = "Target Support Files/Pods-PlanetNews/Pods-PlanetNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,6 +287,7 @@
 				4BC72ECE2754EC690092ECEC /* JoinScreenViewModel.swift */,
 				4B9C728C2755338A0075C59A /* SignUpViewModel.swift */,
 				4BC4985527563DFC006EF8DF /* SignInViewModel.swift */,
+				4BE8CDFB2762B6C000AFC0F6 /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -377,6 +384,7 @@
 				4B9C729A27553D790075C59A /* TextFieldViewCell.swift */,
 				4B9C72A227556CA00075C59A /* ButtonViewCell.swift */,
 				4B9C72A42755732D0075C59A /* TextButtonViewCell.swift */,
+				4BE8CDF92762B35F00AFC0F6 /* NewsViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -412,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC7C7EC27622AEE00BAEAD6 /* FeedViewController.swift */,
+				4BE8CDF72762B29900AFC0F6 /* FeedView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -588,6 +597,7 @@
 				4BFC7DF72756961C004C4F72 /* ErrorMessages.swift in Sources */,
 				4B23EF292762815A00F911F3 /* News.swift in Sources */,
 				4B9C72A52755732D0075C59A /* TextButtonViewCell.swift in Sources */,
+				4BE8CDFA2762B35F00AFC0F6 /* NewsViewCell.swift in Sources */,
 				4BC72ECF2754EC690092ECEC /* JoinScreenViewModel.swift in Sources */,
 				4BC72EBE2754CCE50092ECEC /* FontConstants.swift in Sources */,
 				4BC72EA32754C7150092ECEC /* JoinScreenViewController.swift in Sources */,
@@ -608,6 +618,7 @@
 				4BC7C7F327623F8C00BAEAD6 /* AccountViewController.swift in Sources */,
 				4B23EF2F2762875800F911F3 /* NewsApiService.swift in Sources */,
 				4B9C72B327557EA30075C59A /* EmailValidator.swift in Sources */,
+				4BE8CDFC2762B6C000AFC0F6 /* FeedViewModel.swift in Sources */,
 				4B9C728D2755338A0075C59A /* SignUpViewModel.swift in Sources */,
 				4BC72EC82754D6500092ECEC /* ApplicationTableView.swift in Sources */,
 				4B9C7299275537E60075C59A /* SignUpView.swift in Sources */,
@@ -621,6 +632,7 @@
 				4B23EF2B2762832300F911F3 /* NewsApiServiceProtocol.swift in Sources */,
 				4BC72EC42754D09D0092ECEC /* HeaderView.swift in Sources */,
 				4B9C7287275526170075C59A /* JoinScreenInfoViewCell.swift in Sources */,
+				4BE8CDF82762B29900AFC0F6 /* FeedView.swift in Sources */,
 				4B061F0A2756285D00FA8C4D /* UserRepository.swift in Sources */,
 				4B9C72892755264E0075C59A /* JoinScreenView.swift in Sources */,
 				4BC7C7EF27622F7900BAEAD6 /* CircleButton.swift in Sources */,

@@ -19,4 +19,5 @@ class JsonManager: JsonManagerProtocol {
         
         return try? jsonDecoder.decode(T.self, from: data)
     }
+    
 }

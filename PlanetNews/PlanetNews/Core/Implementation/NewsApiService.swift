@@ -39,7 +39,6 @@ class NewsApiService: NewsApiServiceProtocol {
                                 "pageSize":pageSize,
                                 "apiKey":NewsApiOrg.apiKey,
                                 "country":country.rawValue])
-            .validate()
             .responseJSON { responseJson in
                 switch responseJson.result {
                 case .success:
@@ -55,10 +54,12 @@ class NewsApiService: NewsApiServiceProtocol {
     }
     
     func handleRequest(data: Data?) -> NewsRequest? {
-        guard let data = data, let json = String(data: data, encoding: .utf8) else {
+        guard let data = data else {
             return nil
         }
-        
-        return jsonManager.desirialize(json)
+        guard let body = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+            return nil
+        }
+        return NewsRequest(from: body)
     }
 }
