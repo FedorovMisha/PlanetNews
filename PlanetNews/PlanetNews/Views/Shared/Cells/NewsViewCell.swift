@@ -2,7 +2,7 @@ import UIKit
 import Kingfisher
 
 class NewsViewCell: UITableViewCell {
-    var pictureView = UIImageView()
+    var pictureView = UIImageView(image: ImageConstants.logo)
     let title = UILabel()
     let source = UILabel()
     var isLoad = false
@@ -61,7 +61,7 @@ class NewsViewCell: UITableViewCell {
     func configure(news: News) {
         if !isLoad {
             title.text = news.title
-            let url = URL(string: news.urlToImage ?? "")
+            let url = URL(string: news.urlToImage ?? "https://cdn-icons-png.flaticon.com/512/4228/4228705.png")
             pictureView.kf.setImage(with: url)
             configurePicture()
         }

@@ -22,6 +22,7 @@ class FeedViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         feedView.nextPageDelegate?()
+//        fetchNews()
     }
     
     func bind() {
@@ -34,18 +35,8 @@ class FeedViewController: UIViewController {
         }
         
         feedView.nextPageDelegate = {
-            self.feedViewModel.fetchHeadlineNews { news in
-                let oldCount = self.feedView.data.count
-                self.feedView.data.append(contentsOf: news)
-                DispatchQueue.main.async {
-                    self.feedView.tableView.performBatchUpdates({
-                        let indexes = (oldCount..<(oldCount + news.count)).map {
-                            IndexPath(row: $0, section: 0)
-                        }
-                        self.feedView.tableView.insertRows(at: indexes, with: .automatic)
-                        
-                    }, completion: nil)
-                }
+            self.feedViewModel.fetchEverything { news in
+                self.feedView.insertNews(news: news)
             }
         }
     }

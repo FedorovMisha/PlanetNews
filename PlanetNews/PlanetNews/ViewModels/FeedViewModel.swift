@@ -28,4 +28,15 @@ class FeedViewModel {
             self?.onError?()
         }
     }
+    
+    func fetchEverything(completion: (([News]) -> Void)?) {
+        newsApiService.everything(by: country.rawValue, page: page, pageSize: pageSize, completion: { [weak self] request in
+            self?.page += 1
+            self?.totalCount = request.totalResults
+            print("total counts = \(self?.totalCount) page = \(self?.page)")
+            completion?(request.articles)
+        }) { [weak self] in
+            self?.onError?()
+        }
+    }
 }

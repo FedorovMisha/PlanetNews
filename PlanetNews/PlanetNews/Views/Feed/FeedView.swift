@@ -39,7 +39,7 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row >= data.count - 5 && !isLoading {
+        if indexPath.row >= data.count - 2 && !isLoading {
                 self.nextPageDelegate?()
                 isLoading = true
         }
@@ -50,14 +50,12 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("data count = \(data.count)")
         return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsViewCell
         cell.configure(news: data[indexPath.row])
-        print("Add cell")
         return cell
     }
     
