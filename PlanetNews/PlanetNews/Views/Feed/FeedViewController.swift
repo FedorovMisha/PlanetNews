@@ -3,7 +3,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     lazy var applicationTable: ApplicationTableView = {
-        ApplicationTableView(headerView: HeaderView.shared, contentView: FeedView())
+        ApplicationTableView(headerView: HeaderView.shared, contentView: feedView)
     }()
     
     lazy var feedView: FeedView = {
@@ -17,11 +17,15 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(applicationTable)
         bind()
-        fetchNews()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        feedView.nextPageDelegate?()
     }
     
     func bind() {
-        feedViewModel.onError = { [weak self] in
+        feedViewModel.onError = {
             print("Error")
         }
         
@@ -29,7 +33,21 @@ class FeedViewController: UIViewController {
             self?.feedView.insertNews(news: news)
         }
         
-        feedView.nextPageDelegate = fetchNews
+        feedView.nextPageDelegate = {
+            self.feedViewModel.fetchHeadlineNews { news in
+                let oldCount = self.feedView.data.count
+                self.feedView.data.append(contentsOf: news)
+                DispatchQueue.main.async {
+                    self.feedView.tableView.performBatchUpdates({
+                        let indexes = (oldCount..<(oldCount + news.count)).map {
+                            IndexPath(row: $0, section: 0)
+                        }
+                        self.feedView.tableView.insertRows(at: indexes, with: .automatic)
+                        
+                    }, completion: nil)
+                }
+            }
+        }
     }
     
     func fetchNews() {

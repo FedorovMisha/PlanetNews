@@ -10,6 +10,7 @@ class CircleButton: UIButton {
         configureUI()
         picture.image = image
         self.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        self.addTarget(self, action: #selector(didTouchDownButton), for: .touchDown)
     }
     
     required init?(coder: NSCoder) {
@@ -35,5 +36,10 @@ class CircleButton: UIButton {
     
     @objc func didTapButton() {
         self.didTapDelegate?()
+        self.layer.backgroundColor = ColorConstants.circleButtonBackground.cgColor
+    }
+    
+    @objc func didTouchDownButton() {
+        self.layer.backgroundColor = ColorConstants.grayFont.cgColor
     }
 }

@@ -39,7 +39,7 @@ class NewsApiService: NewsApiServiceProtocol {
                                 "pageSize":pageSize,
                                 "apiKey":NewsApiOrg.apiKey,
                                 "country":country.rawValue])
-            .responseJSON { responseJson in
+            .responseJSON(queue: DispatchQueue.main) { responseJson in
                 switch responseJson.result {
                 case .success:
                     guard let newsRequest = self.handleRequest(data: responseJson.data) else {

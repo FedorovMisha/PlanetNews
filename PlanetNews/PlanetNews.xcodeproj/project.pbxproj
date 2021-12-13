@@ -14,6 +14,10 @@
 		4B061F08275627DB00FA8C4D /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F07275627DB00FA8C4D /* UserRepositoryProtocol.swift */; };
 		4B061F0A2756285D00FA8C4D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F092756285D00FA8C4D /* UserRepository.swift */; };
 		4B061F0C27562B6800FA8C4D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B061F0B27562B6800FA8C4D /* UserManager.swift */; };
+		4B1FFE182767A8FC0085BEF4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE172767A8FC0085BEF4 /* AccountView.swift */; };
+		4B1FFE1A2767A9510085BEF4 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE192767A9510085BEF4 /* AccountViewModel.swift */; };
+		4B1FFE1C2767AFE40085BEF4 /* UserPropertyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE1B2767AFE40085BEF4 /* UserPropertyViewCell.swift */; };
+		4B1FFE1E2767B6840085BEF4 /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE1D2767B6840085BEF4 /* AccountHeaderView.swift */; };
 		4B23EF2527627EA700F911F3 /* NewsApiOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF2427627EA700F911F3 /* NewsApiOrg.swift */; };
 		4B23EF272762802700F911F3 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF262762802700F911F3 /* NewsRequest.swift */; };
 		4B23EF292762815A00F911F3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF282762815A00F911F3 /* News.swift */; };
@@ -87,6 +91,10 @@
 		4B061F07275627DB00FA8C4D /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
 		4B061F092756285D00FA8C4D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		4B061F0B27562B6800FA8C4D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		4B1FFE172767A8FC0085BEF4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		4B1FFE192767A9510085BEF4 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		4B1FFE1B2767AFE40085BEF4 /* UserPropertyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPropertyViewCell.swift; sourceTree = "<group>"; };
+		4B1FFE1D2767B6840085BEF4 /* AccountHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 		4B23EF2427627EA700F911F3 /* NewsApiOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiOrg.swift; sourceTree = "<group>"; };
 		4B23EF262762802700F911F3 /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		4B23EF282762815A00F911F3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -288,6 +296,7 @@
 				4B9C728C2755338A0075C59A /* SignUpViewModel.swift */,
 				4BC4985527563DFC006EF8DF /* SignInViewModel.swift */,
 				4BE8CDFB2762B6C000AFC0F6 /* FeedViewModel.swift */,
+				4B1FFE192767A9510085BEF4 /* AccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 				4B9C72A227556CA00075C59A /* ButtonViewCell.swift */,
 				4B9C72A42755732D0075C59A /* TextButtonViewCell.swift */,
 				4BE8CDF92762B35F00AFC0F6 /* NewsViewCell.swift */,
+				4B1FFE1B2767AFE40085BEF4 /* UserPropertyViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -437,6 +447,8 @@
 			isa = PBXGroup;
 			children = (
 				4BC7C7F227623F8C00BAEAD6 /* AccountViewController.swift */,
+				4B1FFE172767A8FC0085BEF4 /* AccountView.swift */,
+				4B1FFE1D2767B6840085BEF4 /* AccountHeaderView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -586,6 +598,8 @@
 				4B061F08275627DB00FA8C4D /* UserRepositoryProtocol.swift in Sources */,
 				4B061F0C27562B6800FA8C4D /* UserManager.swift in Sources */,
 				4B9C728B2755287E0075C59A /* JoinButtonsViewCell.swift in Sources */,
+				4B1FFE1A2767A9510085BEF4 /* AccountViewModel.swift in Sources */,
+				4B1FFE182767A8FC0085BEF4 /* AccountView.swift in Sources */,
 				4B061F032756264B00FA8C4D /* UserManagerProtocol.swift in Sources */,
 				4BC4985627563DFC006EF8DF /* SignInViewModel.swift in Sources */,
 				4BC72EC22754CF370092ECEC /* ImageConstants.swift in Sources */,
@@ -620,6 +634,7 @@
 				4B9C72B327557EA30075C59A /* EmailValidator.swift in Sources */,
 				4BE8CDFC2762B6C000AFC0F6 /* FeedViewModel.swift in Sources */,
 				4B9C728D2755338A0075C59A /* SignUpViewModel.swift in Sources */,
+				4B1FFE1E2767B6840085BEF4 /* AccountHeaderView.swift in Sources */,
 				4BC72EC82754D6500092ECEC /* ApplicationTableView.swift in Sources */,
 				4B9C7299275537E60075C59A /* SignUpView.swift in Sources */,
 				4BC72EDE2754F4BD0092ECEC /* UIView+Extensions.swift in Sources */,
@@ -634,6 +649,7 @@
 				4B9C7287275526170075C59A /* JoinScreenInfoViewCell.swift in Sources */,
 				4BE8CDF82762B29900AFC0F6 /* FeedView.swift in Sources */,
 				4B061F0A2756285D00FA8C4D /* UserRepository.swift in Sources */,
+				4B1FFE1C2767AFE40085BEF4 /* UserPropertyViewCell.swift in Sources */,
 				4B9C72892755264E0075C59A /* JoinScreenView.swift in Sources */,
 				4BC7C7EF27622F7900BAEAD6 /* CircleButton.swift in Sources */,
 				4B23EF2527627EA700F911F3 /* NewsApiOrg.swift in Sources */,

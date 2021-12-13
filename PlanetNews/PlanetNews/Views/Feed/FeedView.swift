@@ -4,7 +4,7 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     var data: [News] = []
     var nextPageDelegate: (() -> Void)?
-    
+    var isLoading = false
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
@@ -25,24 +25,25 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func insertNews(news: [News]) {
-        let oldCount = data.count
-        data.append(contentsOf: news)
         DispatchQueue.main.async {
+            let oldCount = self.data.count
+            self.data.append(contentsOf: news)
             let indexes = (oldCount..<(oldCount + news.count)).map { i in
                 IndexPath(row: i, section: 0)
             }
-            self.tableView.insertRows(at: indexes, with: .automatic)
+            self.tableView.performBatchUpdates({
+                self.tableView.insertRows(at: indexes, with: .automatic)
+            }, completion: nil)
+            self.isLoading = false
         }
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.row >= data.count - 5 {
-//
-//            DispatchQueue.main.async {
-//                self.nextPageDelegate?()
-//            }
-//        }
-//    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row >= data.count - 5 && !isLoading {
+                self.nextPageDelegate?()
+                isLoading = true
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -63,12 +64,12 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     private func configureTableView() {
         addSubview(tableView)
         tableView.frame = UIScreen.main.bounds
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            tableView.leftAnchor.constraint(equalTo: leftAnchor),
-//            tableView.rightAnchor.constraint(equalTo: rightAnchor),
-//            tableView.topAnchor.constraint(equalTo: topAnchor),
-//            tableView.bottomAnchor.constraint(equalTo:  bottomAnchor)
-//        ])
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.leftAnchor.constraint(equalTo: leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: rightAnchor),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.bottomAnchor.constraint(equalTo:  bottomAnchor)
+        ])
     }
 }

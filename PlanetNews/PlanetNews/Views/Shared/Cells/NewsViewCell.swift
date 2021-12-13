@@ -1,9 +1,11 @@
 import UIKit
+import Kingfisher
 
 class NewsViewCell: UITableViewCell {
-    let pictureView = UIImageView()
+    var pictureView = UIImageView()
     let title = UILabel()
     let source = UILabel()
+    var isLoad = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,7 +23,7 @@ class NewsViewCell: UITableViewCell {
         title.textColor = ColorConstants.white
         title.textAlignment = .left
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.numberOfLines = 0
+        title.numberOfLines = 3
         title.sizeToFit()
         NSLayoutConstraint.activate([
             title.leftAnchor.constraint(equalTo: leftAnchor, constant: 19),
@@ -57,14 +59,16 @@ class NewsViewCell: UITableViewCell {
     }
     
     func configure(news: News) {
-        title.text = news.title 
-        guard let url = URL(string: news.urlToImage ?? ""), let data = try? Data(contentsOf: url) else {
-            return
+        if !isLoad {
+            title.text = news.title
+            let url = URL(string: news.urlToImage ?? "")
+            pictureView.kf.setImage(with: url)
+            configurePicture()
         }
-        pictureView.image = UIImage(data: data)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

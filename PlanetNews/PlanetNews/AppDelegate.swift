@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getViewController() -> UIViewController {
         let userManager = UserManager()
-        if userManager.currentUser != nil {
+        if userManager.currentUser == nil {
             let joinScreenController = JoinScreenViewController()
             let navigationController = UINavigationController(rootViewController: joinScreenController)
             navigationController.setNavigationBarHidden(true, animated: false)
