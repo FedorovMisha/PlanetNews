@@ -5,4 +5,5 @@ struct ErrorMessages {
     static let nameIsShort = "Name is short"
     static let passwordIsShort = "Password short"
     static let confirmPasswordError = "Password not contains"
+    static let newsEnded = "Oops! 😅😅😅😅😅😅😅"
 }

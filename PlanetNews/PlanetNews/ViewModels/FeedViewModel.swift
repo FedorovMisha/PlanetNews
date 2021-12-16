@@ -6,34 +6,34 @@ class FeedViewModel {
     var pageSize = 10
     var newsApiService: NewsApiServiceProtocol = NewsApiService()
     var onError: (() -> Void)?
-    var updateView: (([News])-> Void)?
+    var updateView: (([NewsModel])-> Void)?
     var country = Countries.ru
     
     func fetchHeadlineNews() {
         newsApiService.headlines(by: country, page: page, pageSize: pageSize, completion: { [weak self] request in
             self?.page += 1
             self?.totalCount = request.totalResults
-            self?.updateView?(request.articles)
+            self?.updateView?(request.articles.map({NewsModel(from: $0)}))
         }) { [weak self] in
             self?.onError?()
         }
     }
     
-    func fetchHeadlineNews(completion: (([News]) -> Void)?) {
+    func fetchHeadlineNews(completion: (([NewsModel]) -> Void)?) {
         newsApiService.headlines(by: country, page: page, pageSize: pageSize, completion: { [weak self] request in
             self?.page += 1
             self?.totalCount = request.totalResults
-            completion?(request.articles)
+            completion?(request.articles.map({NewsModel(from: $0)}))
         }) { [weak self] in
             self?.onError?()
         }
     }
     
-    func fetchEverything(completion: (([News]) -> Void)?) {
+    func fetchEverything(completion: (([NewsModel]) -> Void)?) {
         newsApiService.everything(by: country.rawValue, page: page, pageSize: pageSize, completion: { [weak self] request in
             self?.page += 1
             self?.totalCount = request.totalResults
-            completion?(request.articles)
+            completion?(request.articles.map({NewsModel(from: $0)}))
         }) { [weak self] in
             self?.onError?()
         }

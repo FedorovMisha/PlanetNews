@@ -18,6 +18,8 @@
 		4B1FFE1A2767A9510085BEF4 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE192767A9510085BEF4 /* AccountViewModel.swift */; };
 		4B1FFE1C2767AFE40085BEF4 /* UserPropertyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE1B2767AFE40085BEF4 /* UserPropertyViewCell.swift */; };
 		4B1FFE1E2767B6840085BEF4 /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FFE1D2767B6840085BEF4 /* AccountHeaderView.swift */; };
+		4B22027A276BF43300BF44DC /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B220279276BF43300BF44DC /* NewsModel.swift */; };
+		4B22027C276BF9BE00BF44DC /* KingfisherManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B22027B276BF9BE00BF44DC /* KingfisherManager+Extensions.swift */; };
 		4B23EF2527627EA700F911F3 /* NewsApiOrg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF2427627EA700F911F3 /* NewsApiOrg.swift */; };
 		4B23EF272762802700F911F3 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF262762802700F911F3 /* NewsRequest.swift */; };
 		4B23EF292762815A00F911F3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF282762815A00F911F3 /* News.swift */; };
@@ -99,6 +101,8 @@
 		4B1FFE192767A9510085BEF4 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		4B1FFE1B2767AFE40085BEF4 /* UserPropertyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPropertyViewCell.swift; sourceTree = "<group>"; };
 		4B1FFE1D2767B6840085BEF4 /* AccountHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
+		4B220279276BF43300BF44DC /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		4B22027B276BF9BE00BF44DC /* KingfisherManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KingfisherManager+Extensions.swift"; sourceTree = "<group>"; };
 		4B23EF2427627EA700F911F3 /* NewsApiOrg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiOrg.swift; sourceTree = "<group>"; };
 		4B23EF262762802700F911F3 /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		4B23EF282762815A00F911F3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -192,12 +196,12 @@
 			path = Entitites;
 			sourceTree = "<group>";
 		};
-		4B86A826276BADF400DCF619 /* NewsScreen */ = {
+		4B86A826276BADF400DCF619 /* News */ = {
 			isa = PBXGroup;
 			children = (
 				4B86A827276BAE0C00DCF619 /* NewsViewController.swift */,
 			);
-			path = NewsScreen;
+			path = News;
 			sourceTree = "<group>";
 		};
 		4B9C728E275534540075C59A /* Core */ = {
@@ -286,6 +290,7 @@
 			children = (
 				4BC72ED02754EE6D0092ECEC /* SignInCredentials.swift */,
 				4B9C7296275535DF0075C59A /* SignUpCredentials.swift */,
+				4B220279276BF43300BF44DC /* NewsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,7 +298,7 @@
 		4BC72E9D2754C6850092ECEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4B86A826276BADF400DCF619 /* NewsScreen */,
+				4B86A826276BADF400DCF619 /* News */,
 				4BC7C7F127623F7900BAEAD6 /* Account */,
 				4BC7C7F027623F7200BAEAD6 /* Search */,
 				4BC7C7EA276227CD00BAEAD6 /* Feed */,
@@ -368,6 +373,7 @@
 				4BC72EA82754C9630092ECEC /* Number+Extensions.swift */,
 				4BC72EDD2754F4BD0092ECEC /* UIView+Extensions.swift */,
 				4BC4985927564B2F006EF8DF /* TextFieldViewCell+Extensions.swift */,
+				4B22027B276BF9BE00BF44DC /* KingfisherManager+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -618,6 +624,7 @@
 				4B061F08275627DB00FA8C4D /* UserRepositoryProtocol.swift in Sources */,
 				4B061F0C27562B6800FA8C4D /* UserManager.swift in Sources */,
 				4B9C728B2755287E0075C59A /* JoinButtonsViewCell.swift in Sources */,
+				4B22027A276BF43300BF44DC /* NewsModel.swift in Sources */,
 				4B1FFE1A2767A9510085BEF4 /* AccountViewModel.swift in Sources */,
 				4B1FFE182767A8FC0085BEF4 /* AccountView.swift in Sources */,
 				4B061F032756264B00FA8C4D /* UserManagerProtocol.swift in Sources */,
@@ -643,6 +650,7 @@
 				4B9C7297275535DF0075C59A /* SignUpCredentials.swift in Sources */,
 				4B061F012756259800FA8C4D /* JsonManager.swift in Sources */,
 				4B9C72AF27557DF90075C59A /* PasswordValidator.swift in Sources */,
+				4B22027C276BF9BE00BF44DC /* KingfisherManager+Extensions.swift in Sources */,
 				4BC72EC62754D4FB0092ECEC /* TextConstants.swift in Sources */,
 				4BC72EC02754CE270092ECEC /* ColorConstants.swift in Sources */,
 				4BC72EA92754C9630092ECEC /* Number+Extensions.swift in Sources */,

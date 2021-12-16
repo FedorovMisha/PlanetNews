@@ -1,7 +1,7 @@
 import UIKit
 
 class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
-    var data: [News] = []
+    var data: [NewsModel] = []
     var nextPageDelegate: (() -> Void)?
     var isLoading = false
     var openNewsDelegate: ((String) -> Void)?
@@ -42,7 +42,7 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func insertNews(news: [News]) {
+    func insertNews(news: [NewsModel]) {
         DispatchQueue.main.async {
             let oldCount = self.data.count
             self.data.append(contentsOf: news)

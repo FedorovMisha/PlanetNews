@@ -34,7 +34,12 @@ class SearchViewController: UIViewController {
                 self?.searchView.updateNews(news: news)
             }
         }
-        
+        searchViewModel.onError = {
+            let alertVc = UIAlertController(title: ErrorMessages.newsEnded, message: nil, preferredStyle: .alert)
+            alertVc.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(alertVc, animated: true, completion: nil)
+        }
         searchView.searchInput.searchDelegate = self.search(query:)
         searchView.nextPageDelegate = { [weak self] in
             self?.searchViewModel.findNext()

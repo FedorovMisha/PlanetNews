@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class SearchView: UIView, UITableViewDelegate, UITableViewDataSource {
     let searchLabel = UILabel()
@@ -16,7 +17,7 @@ class SearchView: UIView, UITableViewDelegate, UITableViewDataSource {
         return tableView
     }()
     
-    private var data: [News] = []
+    private var data: [NewsModel] = []
     
     init() {
         super.init(frame: UIScreen.main.bounds)
@@ -33,15 +34,16 @@ class SearchView: UIView, UITableViewDelegate, UITableViewDataSource {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateNews(news: [News]) {
+    func updateNews(news: [NewsModel]) {
         DispatchQueue.main.async {
             self.data = news
             self.isLoading = false
             self.tableView.reloadData()
+            KingfisherManager.shared.cleanCache()
         }
     }
     
-    func insertNews(news: [News]) {
+    func insertNews(news: [NewsModel]) {
         DispatchQueue.main.async {
             let oldCount = self.data.count
             self.data.append(contentsOf: news)

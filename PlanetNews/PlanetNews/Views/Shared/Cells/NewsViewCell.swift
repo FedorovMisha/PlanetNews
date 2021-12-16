@@ -20,6 +20,13 @@ class NewsViewCell: UITableViewCell {
         configureTitle()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        pictureView.kf.cancelDownloadTask()
+        pictureView.image = nil
+        KingfisherManager.shared.cache.clearMemoryCache()
+    }
+    
     func configureTitle() {
         title.textColor = ColorConstants.white
         title.textAlignment = .left
@@ -60,20 +67,18 @@ class NewsViewCell: UITableViewCell {
         ])
     }
     
-    func configure(news: News) {
-        if !isLoad {
-            title.text = news.title
-            source.text = "Source: \(news.source.name)"
-            let url = URL(string: news.urlToImage ?? "")
-            pictureView.kf.setImage(with: url) { result in
-                switch result {
-                case .success(_):
-                    break
-                case .failure(_):
-                    self.pictureView.image = ImageConstants.defaultNewsImage
-                }
+    
+    func configure(news: NewsModel) {
+        title.text = news.title
+        source.text = "Source: \(news.sourceName)"
+        let url = URL(string: news.urlToImage ?? "")
+        pictureView.kf.setImage(with: url) { result in
+            switch result {
+            case .success:
+                break
+            case .failure:
+                self.pictureView.image = ImageConstants.defaultNewsImage
             }
-            configurePicture()
         }
     }
     

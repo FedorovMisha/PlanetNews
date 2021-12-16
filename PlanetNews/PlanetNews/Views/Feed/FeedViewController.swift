@@ -28,7 +28,10 @@ class FeedViewController: UIViewController {
     
     func bind() {
         feedViewModel.onError = {
-            print("Error")
+            let alertVc = UIAlertController(title: ErrorMessages.newsEnded, message: nil, preferredStyle: .alert)
+            alertVc.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(alertVc, animated: true, completion: nil)
         }
         
         feedViewModel.updateView = { [weak self] news in

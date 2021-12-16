@@ -7,7 +7,8 @@ class SearchViewModel {
     var page = 1
     var queryTotalItems = 0
     var query = ""
-    var updateViewDataDelegate: (([News], Bool) -> Void)?
+    var updateViewDataDelegate: (([NewsModel], Bool) -> Void)?
+    var onError: (() -> Void)?
     
     func search(by query: String) {
         reset()
@@ -15,9 +16,9 @@ class SearchViewModel {
         apiService.everything(by: query, page: page, pageSize: Self.pageSize) { request in
             self.page += 1
             self.queryTotalItems = request.totalResults
-            self.updateViewDataDelegate?(request.articles, false)
+            self.updateViewDataDelegate?(request.articles.map({NewsModel(from: $0)}), false)
         } onError: {
-            print("search err")
+            self.onError?()
         }
 
     }
@@ -29,7 +30,7 @@ class SearchViewModel {
         
         apiService.everything(by: query, page: page, pageSize: Self.pageSize) { request in
             self.page += 1
-            self.updateViewDataDelegate?(request.articles, true)
+            self.updateViewDataDelegate?(request.articles.map({NewsModel(from: $0)}), true)
         } onError: {
             print("next page err")
         }
