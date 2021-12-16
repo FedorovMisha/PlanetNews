@@ -21,4 +21,12 @@ struct ImageConstants {
     static var accountImage: UIImage {
         UIImage(named: "account")!
     }
+    
+    static var defaultNewsImage: UIImage {
+        UIImage(named: "default_image")!
+    }
+    
+    static var searchIcon: UIImage {
+        UIImage(named: "search_icon")!
+    }
 }

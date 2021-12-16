@@ -2,6 +2,7 @@ import UIKit
 import Kingfisher
 
 class NewsViewCell: UITableViewCell {
+    static let id = "\(NewsViewCell.self)"
     var pictureView = UIImageView(image: ImageConstants.logo)
     let title = UILabel()
     let source = UILabel()
@@ -35,6 +36,7 @@ class NewsViewCell: UITableViewCell {
     
     func configureSource() {
         source.textColor = ColorConstants.grayFont
+        source.font = FontConstants.robotoMedium.withSize(14)
         source.textAlignment = .left
         source.text = "Source"
         source.translatesAutoresizingMaskIntoConstraints = false
@@ -61,8 +63,16 @@ class NewsViewCell: UITableViewCell {
     func configure(news: News) {
         if !isLoad {
             title.text = news.title
-            let url = URL(string: news.urlToImage ?? "https://cdn-icons-png.flaticon.com/512/4228/4228705.png")
-            pictureView.kf.setImage(with: url)
+            source.text = "Source: \(news.source.name)"
+            let url = URL(string: news.urlToImage ?? "")
+            pictureView.kf.setImage(with: url) { result in
+                switch result {
+                case .success(_):
+                    break
+                case .failure(_):
+                    self.pictureView.image = ImageConstants.defaultNewsImage
+                }
+            }
             configurePicture()
         }
     }

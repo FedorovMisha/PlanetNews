@@ -3,7 +3,10 @@ import UIKit
 class FeedViewController: UIViewController {
 
     lazy var applicationTable: ApplicationTableView = {
-        ApplicationTableView(headerView: HeaderView.shared, contentView: feedView)
+        let headerView = HeaderView.shared
+        headerView.mainLabel.text = TextConstants.feedViewHeaderTitle
+        headerView.subLabel.text = TextConstants.feedViewHeaderSubTitle
+        return ApplicationTableView(headerView: headerView, contentView: feedView)
     }()
     
     lazy var feedView: FeedView = {
@@ -11,7 +14,6 @@ class FeedViewController: UIViewController {
     }()
     
     var feedViewModel = FeedViewModel()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,6 @@ class FeedViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         feedView.nextPageDelegate?()
-//        fetchNews()
     }
     
     func bind() {
@@ -39,9 +40,13 @@ class FeedViewController: UIViewController {
                 self.feedView.insertNews(news: news)
             }
         }
+        
+        feedView.openNewsDelegate = openNews(url:)
     }
     
-    func fetchNews() {
-        feedViewModel.fetchHeadlineNews()
+    func openNews(url: String) {
+        let vc = NewsViewController()
+        vc.url = url
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

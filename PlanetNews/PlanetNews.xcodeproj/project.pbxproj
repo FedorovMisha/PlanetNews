@@ -25,6 +25,10 @@
 		4B23EF2D276285FB00F911F3 /* NewsEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF2C276285FB00F911F3 /* NewsEndpoints.swift */; };
 		4B23EF2F2762875800F911F3 /* NewsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23EF2E2762875800F911F3 /* NewsApiService.swift */; };
 		4B81CCB52759120D0046A783 /* SignInHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81CCB42759120D0046A783 /* SignInHeaderView.swift */; };
+		4B86A821276B5DBF00DCF619 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86A820276B5DBF00DCF619 /* SearchViewModel.swift */; };
+		4B86A823276B630300DCF619 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86A822276B630300DCF619 /* SearchView.swift */; };
+		4B86A825276B637B00DCF619 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86A824276B637B00DCF619 /* SearchInput.swift */; };
+		4B86A828276BAE0C00DCF619 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86A827276BAE0C00DCF619 /* NewsViewController.swift */; };
 		4B9C7287275526170075C59A /* JoinScreenInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C7286275526170075C59A /* JoinScreenInfoViewCell.swift */; };
 		4B9C72892755264E0075C59A /* JoinScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C72882755264E0075C59A /* JoinScreenView.swift */; };
 		4B9C728B2755287E0075C59A /* JoinButtonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C728A2755287E0075C59A /* JoinButtonsViewCell.swift */; };
@@ -102,6 +106,10 @@
 		4B23EF2C276285FB00F911F3 /* NewsEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndpoints.swift; sourceTree = "<group>"; };
 		4B23EF2E2762875800F911F3 /* NewsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiService.swift; sourceTree = "<group>"; };
 		4B81CCB42759120D0046A783 /* SignInHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHeaderView.swift; sourceTree = "<group>"; };
+		4B86A820276B5DBF00DCF619 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		4B86A822276B630300DCF619 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4B86A824276B637B00DCF619 /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
+		4B86A827276BAE0C00DCF619 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		4B9C7286275526170075C59A /* JoinScreenInfoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreenInfoViewCell.swift; sourceTree = "<group>"; };
 		4B9C72882755264E0075C59A /* JoinScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreenView.swift; sourceTree = "<group>"; };
 		4B9C728A2755287E0075C59A /* JoinButtonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButtonsViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +190,14 @@
 				4B23EF2C276285FB00F911F3 /* NewsEndpoints.swift */,
 			);
 			path = Entitites;
+			sourceTree = "<group>";
+		};
+		4B86A826276BADF400DCF619 /* NewsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4B86A827276BAE0C00DCF619 /* NewsViewController.swift */,
+			);
+			path = NewsScreen;
 			sourceTree = "<group>";
 		};
 		4B9C728E275534540075C59A /* Core */ = {
@@ -277,6 +293,7 @@
 		4BC72E9D2754C6850092ECEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4B86A826276BADF400DCF619 /* NewsScreen */,
 				4BC7C7F127623F7900BAEAD6 /* Account */,
 				4BC7C7F027623F7200BAEAD6 /* Search */,
 				4BC7C7EA276227CD00BAEAD6 /* Feed */,
@@ -297,6 +314,7 @@
 				4BC4985527563DFC006EF8DF /* SignInViewModel.swift */,
 				4BE8CDFB2762B6C000AFC0F6 /* FeedViewModel.swift */,
 				4B1FFE192767A9510085BEF4 /* AccountViewModel.swift */,
+				4B86A820276B5DBF00DCF619 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 				4BC72EC72754D6500092ECEC /* ApplicationTableView.swift */,
 				4BC72EE72754FF240092ECEC /* WhiteButton.swift */,
 				4BC7C7EE27622F7900BAEAD6 /* CircleButton.swift */,
+				4B86A824276B637B00DCF619 /* SearchInput.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -439,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC7C7F427623FA600BAEAD6 /* SearchViewController.swift */,
+				4B86A822276B630300DCF619 /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -602,6 +622,7 @@
 				4B1FFE182767A8FC0085BEF4 /* AccountView.swift in Sources */,
 				4B061F032756264B00FA8C4D /* UserManagerProtocol.swift in Sources */,
 				4BC4985627563DFC006EF8DF /* SignInViewModel.swift in Sources */,
+				4B86A823276B630300DCF619 /* SearchView.swift in Sources */,
 				4BC72EC22754CF370092ECEC /* ImageConstants.swift in Sources */,
 				4BC72EA62754C83D0092ECEC /* FlexSize.swift in Sources */,
 				4B81CCB52759120D0046A783 /* SignInHeaderView.swift in Sources */,
@@ -609,6 +630,7 @@
 				4BC4985A27564B2F006EF8DF /* TextFieldViewCell+Extensions.swift in Sources */,
 				4BC7C7E9276222A000BAEAD6 /* ApplicationTabBarController.swift in Sources */,
 				4BFC7DF72756961C004C4F72 /* ErrorMessages.swift in Sources */,
+				4B86A825276B637B00DCF619 /* SearchInput.swift in Sources */,
 				4B23EF292762815A00F911F3 /* News.swift in Sources */,
 				4B9C72A52755732D0075C59A /* TextButtonViewCell.swift in Sources */,
 				4BE8CDFA2762B35F00AFC0F6 /* NewsViewCell.swift in Sources */,
@@ -616,6 +638,7 @@
 				4BC72EBE2754CCE50092ECEC /* FontConstants.swift in Sources */,
 				4BC72EA32754C7150092ECEC /* JoinScreenViewController.swift in Sources */,
 				4B23EF2D276285FB00F911F3 /* NewsEndpoints.swift in Sources */,
+				4B86A821276B5DBF00DCF619 /* SearchViewModel.swift in Sources */,
 				4B061F06275626C800FA8C4D /* ApplicationUser.swift in Sources */,
 				4B9C7297275535DF0075C59A /* SignUpCredentials.swift in Sources */,
 				4B061F012756259800FA8C4D /* JsonManager.swift in Sources */,
@@ -647,6 +670,7 @@
 				4B23EF2B2762832300F911F3 /* NewsApiServiceProtocol.swift in Sources */,
 				4BC72EC42754D09D0092ECEC /* HeaderView.swift in Sources */,
 				4B9C7287275526170075C59A /* JoinScreenInfoViewCell.swift in Sources */,
+				4B86A828276BAE0C00DCF619 /* NewsViewController.swift in Sources */,
 				4BE8CDF82762B29900AFC0F6 /* FeedView.swift in Sources */,
 				4B061F0A2756285D00FA8C4D /* UserRepository.swift in Sources */,
 				4B1FFE1C2767AFE40085BEF4 /* UserPropertyViewCell.swift in Sources */,

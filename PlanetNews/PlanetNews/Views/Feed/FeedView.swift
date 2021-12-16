@@ -1,10 +1,28 @@
 import UIKit
 
 class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
-    
     var data: [News] = []
     var nextPageDelegate: (() -> Void)?
     var isLoading = false
+    var openNewsDelegate: ((String) -> Void)?
+    lazy var headerView: UIView = {
+        let view = UIView(frame: FlexSize.rect(sample: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 100)))
+        let label = UILabel()
+        label.text = TextConstants.feedViewTitle
+        label.font = FontConstants.encodeSansBold.withSize(FlexSize.height(28))
+        label.textColor = ColorConstants.white
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 25),
+            label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15),
+            label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -17),
+            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 38)
+        ])
+        return view
+    }()
+    
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
@@ -16,7 +34,7 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     init() {
         super.init(frame: .zero)
-        tableView.register(NewsViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(NewsViewCell.self, forCellReuseIdentifier: NewsViewCell.id)
         configureTableView()
     }
     
@@ -40,8 +58,8 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row >= data.count - 2 && !isLoading {
-                self.nextPageDelegate?()
-                isLoading = true
+            self.nextPageDelegate?()
+            isLoading = true
         }
     }
     
@@ -54,19 +72,25 @@ class FeedView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsViewCell.id, for: indexPath) as! NewsViewCell
         cell.configure(news: data[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let news = data[indexPath.row]
+        openNewsDelegate?(news.url)
     }
     
     private func configureTableView() {
         addSubview(tableView)
         tableView.frame = UIScreen.main.bounds
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableHeaderView = headerView
         NSLayoutConstraint.activate([
-            tableView.leftAnchor.constraint(equalTo: leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: rightAnchor),
-            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.leftAnchor.constraint(equalTo: leftAnchor, constant: 5),
+            tableView.rightAnchor.constraint(equalTo: rightAnchor, constant: -5),
+            tableView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
             tableView.bottomAnchor.constraint(equalTo:  bottomAnchor)
         ])
     }

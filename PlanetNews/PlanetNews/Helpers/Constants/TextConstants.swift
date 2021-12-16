@@ -17,4 +17,13 @@ struct TextConstants {
     static let signInTitle = "Login"
     static let signInButtonTitle = "Login"
     static let signInBackButton = "Back"
+    
+    static let feedViewTitle = "Latest news"
+    static let feedViewHeaderTitle = "Discover latest news"
+    static let feedViewHeaderSubTitle = "Hey, user!"
+    
+    static let searchViewTitle = "Search"
+    static let searchViweHeaderTitle = "Find news"
+    static let searchViewHeaderSubTitle = "Let’s search news!"
+    static let searchViewInputPlaceholder = "Query"
 }

@@ -25,7 +25,7 @@ class ApplicationTableView: UITableView, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        FlexSize.height(597)
+        UIScreen.main.bounds.height - headerView.frame.height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
