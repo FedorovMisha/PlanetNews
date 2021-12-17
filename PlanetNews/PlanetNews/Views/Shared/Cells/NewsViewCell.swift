@@ -24,7 +24,7 @@ class NewsViewCell: UITableViewCell {
         super.prepareForReuse()
         pictureView.kf.cancelDownloadTask()
         pictureView.image = nil
-        KingfisherManager.shared.cache.clearMemoryCache()
+//        KingfisherManager.shared.cleanCache()
     }
     
     func configureTitle() {

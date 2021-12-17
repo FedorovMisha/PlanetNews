@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class SearchViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(applicationTable)
         bind()
+        KingfisherManager.shared.setupKingfisher()
     }
     
     func bind() {
