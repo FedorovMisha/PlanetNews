@@ -51,7 +51,7 @@ class SearchView: UIView, UITableViewDelegate, UITableViewDataSource {
                 IndexPath(row: i, section: 0)
             }
             self.tableView.performBatchUpdates({
-                self.tableView.insertRows(at: indexes, with: .automatic)
+                self.tableView.insertRows(at: indexes, with: .bottom)
             }, completion: nil)
             self.isLoading = false
         }
