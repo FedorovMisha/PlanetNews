@@ -11,8 +11,8 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = ColorConstants.white
         loadWebView()
-        webView.backgroundColor = .red
     }
     
     private func loadWebView() {
