@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getViewController() -> UIViewController {
         let userManager = UserManager()
+        userManager.logOut()
         if userManager.currentUser == nil {
             let joinScreenController = JoinScreenViewController()
             let navigationController = UINavigationController(rootViewController: joinScreenController)

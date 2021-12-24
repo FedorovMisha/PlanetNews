@@ -8,6 +8,8 @@ class TextFieldViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         selectionStyle = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
         setupFieldView()
         bind()
     }
@@ -56,5 +58,11 @@ class TextFieldViewCell: UITableViewCell {
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
         textField.leftViewMode = .always
         contentView.addSubview(textField)
+    }
+}
+
+extension TextFieldViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        endEditing(true)
     }
 }

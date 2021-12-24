@@ -1,0 +1,83 @@
+# Rule that you want to disable.
+disabled_rules:
+    - trailing_newline
+    - opening_brace
+    - empty_count
+    - comma
+    - colon
+    - force_cast
+    - type_name
+    - variable_name_min_length
+    - trailing_semicolon
+    - force_try
+    - function_body_length
+    - nesting
+    - variable_name
+    - conditional_binding_cascade
+    - variable_name_max_length
+    - operator_whitespace
+    - control_statement
+    - legacy_constant
+    - line_length
+    - return_arrow_whitespace
+    - trailing_whitespace
+    - closing_brace
+    - statement_position
+    - type_body_length
+    - todo
+    - legacy_constructor
+    - valid_docs
+    - missing_docs
+    - file_length
+    - leading_whitespace
+
+# Of the default disabling of rules, what you want to enable.
+ opt_in_rules:
+ - attributes
+ - closure_end_indentation
+ - closure_spacing
+ - conditional_returns_on_newline
+ - empty_count
+ - explicit_init
+ - explicit_type_interface # new
+ - fatal_error_message   # new
+ # because even modify the file header is not released Error
+ #- file_header
+ - first_where
+ # because no problem as the case
+ #- force_unwrapping
+ - implicitly_unwrapped_optional # new
+ - missing_docs
+ - nimble_operator
+ - number_separator
+ - object_literal
+ - operator_usage_whitespace
+ - overridden_super_call
+ disable this time because # basically better off in private to the small but app scale
+ #- private_outlet
+ - prohibited_super_call
+ - redundant_nil_coalescing
+ # no problem even if they are not aligned because not many up there
+ #- sorted_imports
+ - switch_case_on_newline
+ - valid_docs
+
+
+
+# Added OSS library is you do not want to include in the subject
+ excluded:
+ - Pods/
+ - Carthage/
+
+
+
+# Character limit per line changes to the 300
+ because it does not catch the comment that is added by default at the time of # project created
+ line_length: 300
+
+
+
+Change # variable name to the permission if one or more characters
+ identifier_name:
+
+  min_length: 1
